@@ -94,4 +94,46 @@
     
   </entry>
   
+  <entry>
+    <title>zsh plugins like fish shell</title>
+    <link href="http://lxie.xyz/2016/05/05/zsh-plugins-like-fish/"/>
+    <id>http://lxie.xyz/2016/05/05/zsh-plugins-like-fish/</id>
+    <published>2016-05-05T06:25:15.000Z</published>
+    <updated>2016-05-17T09:23:56.000Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/fish-shell/fish-shell&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;fish shell&lt;/a&gt; 相比较 &lt;a href=&quot;https://github.com/robbyrussell/oh-my-zsh&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;zsh(oh-my-zsh)&lt;/a&gt; 提供了一些比较炫酷的特性， 详见官网 &lt;a href=&quot;http://fishshell.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;fishshell&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;其中主要有两个特性非常有吸引力：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;智能提示（Autosuggestions）&lt;/li&gt;
+&lt;li&gt;语法高亮（Glorious VGA Color）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;但是搜索后发现，使用过fish的同学大多最终都回归了zsh, 主要因为fish有如下问题：&lt;strong&gt;非标准shell坑多&lt;/strong&gt;、无插件机制、不兼容vim等&lt;/p&gt;
+&lt;p&gt;那么问题来了，&lt;a href=&quot;https://github.com/robbyrussell/oh-my-zsh&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;zsh&lt;/a&gt; 是否有类似比较炫酷的功能呢？&lt;/p&gt;
+&lt;p&gt;答案是肯定的（&lt;code&gt;好的特性总是会相互学习&lt;/code&gt;），在  &lt;a href=&quot;https://github.com/zsh-users&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;zsh-users&lt;/a&gt;(zsh community projects) 中有两个插件插件实现了相同的特性：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/zsh-users/zsh-autosuggestions&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;zsh-autosuggestions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/zsh-users/zsh-syntax-highlighting&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;zsh-syntax-highlighting&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;install-plugins&quot;&gt;&lt;a href=&quot;#install-plugins&quot; class=&quot;headerlink&quot; title=&quot;install plugins&quot;&gt;&lt;/a&gt;install plugins&lt;/h2&gt;&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# clone plugins&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git &lt;span class=&quot;built_in&quot;&gt;clone&lt;/span&gt; https://github.com/zsh-users/zsh-autosuggestions.git \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;variable&quot;&gt;$&amp;#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&amp;#125;&lt;/span&gt;/plugins/zsh-autosuggestions&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git &lt;span class=&quot;built_in&quot;&gt;clone&lt;/span&gt; https://github.com/zsh-users/zsh-syntax-highlighting.git \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;variable&quot;&gt;$&amp;#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&amp;#125;&lt;/span&gt;/plugins/zsh-syntax-highlighting&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# config ~/.zshrc&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# plugins=( [plugins...] zsh-autosuggestions zsh-syntax-highlighting)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# source config&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;source&lt;/span&gt; ~/.zshrc&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;zsh-autosuggestions&quot;&gt;&lt;a href=&quot;#zsh-autosuggestions&quot; class=&quot;headerlink&quot; title=&quot;zsh-autosuggestions&quot;&gt;&lt;/a&gt;zsh-autosuggestions&lt;/h2&gt;&lt;p&gt;根据 shell history 进行智能提示&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/media/14634761414446.jpg&quot; alt=&quot;zsh-autosuggestions&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;zsh-syntax-highlighting&quot;&gt;&lt;a href=&quot;#zsh-syntax-highlighting&quot; class=&quot;headerlink&quot; title=&quot;zsh-syntax-highlighting&quot;&gt;&lt;/a&gt;zsh-syntax-highlighting&lt;/h2&gt;&lt;p&gt;图中可以看到 echo 是绿色的，代表存在这个命令，如果打错了(git)，就显示是红色的&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/media/14634767368616.jpg&quot; alt=&quot;zsh-syntax-highlighting&quot;&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;https://github.com/fish-shell/fish-shell&quot;&gt;fish shell&lt;/a&gt; 相比较 &lt;a href=&quot;https://github.com/robbyrussell/oh-my-zsh&quot;&gt;zsh(oh-my-zsh)&lt;/a&gt; 提供了一些比较炫酷的特性， 详见官网 &lt;a href=&quot;http://fishshell.com/&quot;&gt;fishshell&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;其中主要有两个特性非常有吸引力：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;智能提示（Autosuggestions）&lt;/li&gt;
+&lt;li&gt;语法高亮（Glorious VGA Color）&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
 </feed>
