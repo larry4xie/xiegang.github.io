@@ -99,7 +99,7 @@
     <link href="http://lxie.xyz/2016/05/05/zsh-plugins-like-fish/"/>
     <id>http://lxie.xyz/2016/05/05/zsh-plugins-like-fish/</id>
     <published>2016-05-05T06:25:15.000Z</published>
-    <updated>2016-05-17T09:23:56.000Z</updated>
+    <updated>2016-05-17T09:31:51.000Z</updated>
     
     <content type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/fish-shell/fish-shell&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;fish shell&lt;/a&gt; 相比较 &lt;a href=&quot;https://github.com/robbyrussell/oh-my-zsh&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;zsh(oh-my-zsh)&lt;/a&gt; 提供了一些比较炫酷的特性， 详见官网 &lt;a href=&quot;http://fishshell.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;fishshell&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;其中主要有两个特性非常有吸引力：&lt;/p&gt;
@@ -133,6 +133,12 @@
     
     </summary>
     
+      <category term="tools" scheme="http://lxie.xyz/categories/tools/"/>
+    
+    
+      <category term="tools" scheme="http://lxie.xyz/tags/tools/"/>
+    
+      <category term="zsh" scheme="http://lxie.xyz/tags/zsh/"/>
     
   </entry>
   
