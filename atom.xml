@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://lxie.xyz/"/>
-  <updated>2016-05-16T08:53:55.000Z</updated>
+  <updated>2016-05-19T16:38:39.000Z</updated>
   <id>http://lxie.xyz/</id>
   
   <author>
@@ -14,6 +14,271 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>字符集和字符编码</title>
+    <link href="http://lxie.xyz/2016/05/20/charset-and-encoding/"/>
+    <id>http://lxie.xyz/2016/05/20/charset-and-encoding/</id>
+    <published>2016-05-19T16:22:38.000Z</published>
+    <updated>2016-05-19T16:38:39.000Z</updated>
+    
+    <content type="html">&lt;p&gt;众所周知计算机中储存的信息都是用二进制数表示的，而我们在屏幕上看到的英文、汉字等字符都是二进制数转换之后的结果，这个过程中就需要对信息（字符）进行编码和解码工作&lt;/p&gt;
+&lt;p&gt;然而全世界很多个国家都在为自己的字符编码，并且互不想通，不同的语言字符编码值相同却可能代表不同的符号&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;字符(Character)是各种文字和符号的总称，包括各国家文字、标点符号、图形符号、数字等&lt;/li&gt;
+&lt;li&gt;字符集(Character set)是多个字符的集合&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;能不能定义一个超大的字符集，它可以容纳全世界所有的文字字符，再对它们统一进行编码，让每一个字符都对应一个不同的编码值&lt;/strong&gt;&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;Unicode-amp-ISO-10646&quot;&gt;&lt;a href=&quot;#Unicode-amp-ISO-10646&quot; class=&quot;headerlink&quot; title=&quot;Unicode &amp;amp; ISO 10646&quot;&gt;&lt;/a&gt;Unicode &amp;amp; ISO 10646&lt;/h2&gt;&lt;p&gt;有两个机构试图来做统一编码的事情，分别是：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;国际标准化组织（ISO）&lt;br&gt; 于1984年创建ISO/IEC JTC1/SC2/WG2工作组，试图制定一份“通用字符集”（Universal Character Set，简称&lt;strong&gt;UCS&lt;/strong&gt;），并最终制定了ISO 10646标准&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;统一码联盟&lt;br&gt; 由一众软件制造商于1988年组成，并且开发了&lt;strong&gt;Unicode&lt;/strong&gt;标准（The Unicode Standard）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;1991年前后，两个项目的参与者都认识到，世界不需要两个不兼容的字符集。于是，它们开始合并双方的工作成果，并为创立一个单一编码表而协同工作&lt;/p&gt;
+&lt;p&gt;从Unicode 2.0开始，Unicode采用了与ISO 10646-1相同的字库和字码；ISO也承诺，ISO 10646将不会替超出U+10FFFF范围的UCS-4编码赋值，以使得两者保持一致。两个项目仍都独立存在，并独立地公布各自的标准。不过由于Unicode这一名字比较好记，因而它使用更为广泛&lt;/p&gt;
+&lt;p&gt;两者版本的对应关系可以通过如下地址查看: &lt;a href=&quot;https://zh.wikipedia.org/wiki/Unicode&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://zh.wikipedia.org/wiki/Unicode&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Unicode&quot;&gt;&lt;a href=&quot;#Unicode&quot; class=&quot;headerlink&quot; title=&quot;Unicode&quot;&gt;&lt;/a&gt;Unicode&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;Unicode（中文：万国码、国际码、统一码、单一码）是计算机科学领域里的一项业界标准。它对世界上大部分的文字系统进行了整理、编码，使得电脑可以用更为简单的方式来呈现和处理文字&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Unicode编码点分为17个平面（plane），每个平面包含2^16 （即65536）个码位（code point）。17个平面的码位可表示为从U+000000到U+10FFFF，可以编码百万个字符&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;也就是说Unicode只用了 16 + 5 = 21 个bit&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;目前最新的版本为2015年6月17日公布的 Unicode 8.0.0，已收入超过十万个字符&lt;/p&gt;
+&lt;h2 id=&quot;UCS-4&quot;&gt;&lt;a href=&quot;#UCS-4&quot; class=&quot;headerlink&quot; title=&quot;UCS-4&quot;&gt;&lt;/a&gt;UCS-4&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;在Unicode与ISO 10646合并之前，ISO 10646标准为“通用字符集”（UCS）定义了一种31位的编码形式（即UCS-4），其编码固定占用4个字节，编码空间为0x00000000~0x7FFFFFFF（可以编码20多亿个字符）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;UCS-4有20多亿个编码空间，但实际使用范围并不超过0x10FFFF，并且为了兼容Unicode标准，ISO也承诺将不会为超出0x10FFFF的UCS-4编码赋值&lt;/p&gt;
+&lt;h2 id=&quot;character-encoding&quot;&gt;&lt;a href=&quot;#character-encoding&quot; class=&quot;headerlink&quot; title=&quot;character encoding&quot;&gt;&lt;/a&gt;character encoding&lt;/h2&gt;&lt;p&gt;Unicode(UCS)字符集让每一个字符有了唯一的编码，然后实际的使用中我们往往需要针对 Unicode 字符集的具体字符编码，比如：UTF-16, UTF-8, GBK等&lt;/p&gt;
+&lt;h3 id=&quot;ASCII&quot;&gt;&lt;a href=&quot;#ASCII&quot; class=&quot;headerlink&quot; title=&quot;ASCII&quot;&gt;&lt;/a&gt;ASCII&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;American Standard Code for Information Interchange，美国信息交换标准代码&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;ASCII使用单字节的后 7 bit 表示128个字符，字符集主要包括控制字符（回车键、退格、换行键等），可显示字符（英文大小写字符、阿拉伯数字和西文符号）&lt;/p&gt;
+&lt;p&gt;它主要用于显示现代英语，是现今最通用的单字节编码系统，并等同于国际标准ISO/IEC 646&lt;/p&gt;
+&lt;h3 id=&quot;ISO-8859-1&quot;&gt;&lt;a href=&quot;#ISO-8859-1&quot; class=&quot;headerlink&quot; title=&quot;ISO 8859-1&quot;&gt;&lt;/a&gt;ISO 8859-1&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;正式编号为ISO/IEC 8859-1:1998，又称Latin-1或西欧语言&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;是国际标准化组织内ISO/IEC 8859的第一个8位字符集。它以ASCII为基础，&lt;strong&gt;在空置的0xA0-0xFF的范围内，加入96个字母及符号&lt;/strong&gt;，藉以供使用附加符号的拉丁字母语言使用&lt;/p&gt;
+&lt;h3 id=&quot;UTF-32-amp-UCS-4&quot;&gt;&lt;a href=&quot;#UTF-32-amp-UCS-4&quot; class=&quot;headerlink&quot; title=&quot;UTF-32 &amp;amp; UCS-4&quot;&gt;&lt;/a&gt;UTF-32 &amp;amp; UCS-4&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;UTF: UCS Transformation Format&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;UTF-32它的编码值与UCS-4相同，只不过为了兼容Unicode标准,其编码空间被限定在了0~0x10FFFF之间。因此也可以说：UTF-32是UCS-4的一个子集&lt;/p&gt;
+&lt;h3 id=&quot;UTF-16-amp-UCS-2&quot;&gt;&lt;a href=&quot;#UTF-16-amp-UCS-2&quot; class=&quot;headerlink&quot; title=&quot;UTF-16 &amp;amp; UCS-2&quot;&gt;&lt;/a&gt;UTF-16 &amp;amp; UCS-2&lt;/h3&gt;&lt;p&gt;除了UCS-4，ISO 10646标准为 UCS 定义了一种16位的编码形式（即UCS-2），其编码固定占用2个字节，它包含65536个编码空间（可以为全世界最常用的63K字符编码，为了兼容Unicode，0xD800-0xDFFF之间的码位未使用）&lt;/p&gt;
+&lt;p&gt;但两个字节并不足以真正的“一统江湖”，于是UTF-16诞生了，与UCS-2一样，它使用两个字节为全世界最常用的63K字符编码，不同的是，它使用4个字节对不常用的字符进行编码。&lt;strong&gt;UTF-16属于变长编码&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;具体和Unicode之间的转换关系，有兴趣详见：&lt;a href=&quot;https://zh.wikipedia.org/wiki/UTF-16&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://zh.wikipedia.org/wiki/UTF-16&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;UTF-8&quot;&gt;&lt;a href=&quot;#UTF-8&quot; class=&quot;headerlink&quot; title=&quot;UTF-8&quot;&gt;&lt;/a&gt;UTF-8&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;无论是UTF-16/32还是UCS-2/4，一个字符都需要多个字节来编码，这对那些英语国家来说多浪费啊，因此UTF-8产生了&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在UTF-8编码中，ASCII码中的字符还是ASCII码的值，只需要一个字节表示，其余的字符需要2字节、3字节或4字节来表示&lt;/p&gt;
+&lt;p&gt;UTF-8的编码规则：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;对于ASCII码中的符号，使用单字节编码，其编码值与ASCII值相同。其中ASCII值的范围为0~0x7F，所有编码的二进制值中第一位为0（用来区分单字节编码和多字节编码）&lt;/li&gt;
+&lt;li&gt;其它字符用多个字节来编码（假设用N个字节），多字节编码需满足&lt;ol&gt;
+&lt;li&gt;第一个字节的前N位都为1，第N+1位为0&lt;/li&gt;
+&lt;li&gt;后面N-1个字节的前两位都为10&lt;/li&gt;
+&lt;li&gt;N个字节中其余位全部用来存储Unicode中的码位值&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;字节数&lt;/th&gt;
+&lt;th&gt;Unicode&lt;/th&gt;
+&lt;th&gt;UTF-8编码&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;  1&lt;/td&gt;
+&lt;td&gt;000000-00007F&lt;/td&gt;
+&lt;td&gt;0xxxxxxx&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;  2&lt;/td&gt;
+&lt;td&gt;000080-0007FF&lt;/td&gt;
+&lt;td&gt;110xxxxx 10xxxxxx&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;  3&lt;/td&gt;
+&lt;td&gt;000800-00FFFF&lt;/td&gt;
+&lt;td&gt;1110xxxx 10xxxxxx 10xxxxxx&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;  4&lt;/td&gt;
+&lt;td&gt;010000-10FFFF&lt;/td&gt;
+&lt;td&gt;11110xxx 10xxxxxx 10xxxxxx 10xxxxxx&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&quot;GBxxx&quot;&gt;&lt;a href=&quot;#GBxxx&quot; class=&quot;headerlink&quot; title=&quot;GBxxx&quot;&gt;&lt;/a&gt;GBxxx&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;GB: 汉字字符集标准编码&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;GB相关编码编码规则，本质上类似UTF-8等编码，再次不在概述，有兴趣可以查阅：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://zh.wikipedia.org/wiki/GB_2312&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://zh.wikipedia.org/wiki/GB_2312&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://zh.wikipedia.org/wiki/%E6%B1%89%E5%AD%97%E5%86%85%E7%A0%81%E6%89%A9%E5%B1%95%E8%A7%84%E8%8C%83&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://zh.wikipedia.org/wiki/汉字内码扩展规范&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://zh.wikipedia.org/wiki/GB_18030&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://zh.wikipedia.org/wiki/GB_18030&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;GB2312&quot;&gt;&lt;a href=&quot;#GB2312&quot; class=&quot;headerlink&quot; title=&quot;GB2312&quot;&gt;&lt;/a&gt;GB2312&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;GB2312 或 GB2312–80 是中华人民共和国国家标准简体中文字符集，全称《信息交换用汉字编码字符集·基本集》&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;GB2312使用一字节或者两字节的变长编码，使用两个字节表示汉字，共收录6763个汉字，其中一级汉字3755个，二级汉字3008个；同时收录了包括拉丁字母、希腊字母、日文平假名及片假名字母、俄语西里尔字母在内的682个字符&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;但对于人名、古汉语等方面出现的罕用字和繁体字，GB2312不能处理&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&quot;GBK&quot;&gt;&lt;a href=&quot;#GBK&quot; class=&quot;headerlink&quot; title=&quot;GBK&quot;&gt;&lt;/a&gt;GBK&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;GBK全名为《汉字内码扩展规范(GBK)》&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;微软利用GB2312-80未使用的编码空间，收录GB13000.1-93全部字符制定了GBK编码，GBK向下完全兼容GB2312-80编码，最早实现于Windows 95简体中文版&lt;/p&gt;
+&lt;p&gt;1995年的汉字扩展规范GBK1.0收录了21886个符号，包括21003个汉字和883个其它符号&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;GBK 只为“技术规范指导性文件”，不属于国家标准&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;国家质量技术监督局于2000年3月17日推出了GB 18030-2000标准，以取代GBK&lt;/p&gt;
+&lt;h4 id=&quot;GB18030&quot;&gt;&lt;a href=&quot;#GB18030&quot; class=&quot;headerlink&quot; title=&quot;GB18030&quot;&gt;&lt;/a&gt;GB18030&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;GB18030，全称：国家标准GB18030-2005《信息技术中文编码字符集》，是中华人民共和国现时最新的内码字集，共收录汉字70,244个&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;GB 18030主要有以下特点:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;与 UTF-8 相同，采用多字节编码，每个字可以由1个、2个或4个字节组成&lt;/li&gt;
+&lt;li&gt;支持GB13000及Unicode的全部统一汉字，编码空间庞大，最多可定义161万个字元&lt;/li&gt;
+&lt;li&gt;与GB2312-1980完全兼容，与GBK基本兼容&lt;/li&gt;
+&lt;li&gt;支持中国国内少数民族的文字，不需要动用造字区&lt;/li&gt;
+&lt;li&gt;汉字收录范围包含繁体汉字以及日韩汉字&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;字符编码对比&quot;&gt;&lt;a href=&quot;#字符编码对比&quot; class=&quot;headerlink&quot; title=&quot;字符编码对比&quot;&gt;&lt;/a&gt;字符编码对比&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;字符编码&lt;/th&gt;
+&lt;th&gt;编码空间&lt;/th&gt;
+&lt;th&gt;最少编码字节数&lt;/th&gt;
+&lt;th&gt;最大编码字节数&lt;/th&gt;
+&lt;th&gt;变长编码&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;  ASCII&lt;/td&gt;
+&lt;td&gt;0-7F&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;no&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;IS O8859-1&lt;/td&gt;
+&lt;td&gt;0-FF&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;no&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;  UCS-4&lt;/td&gt;
+&lt;td&gt;0-7FFFFFFF&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;no&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;  UCS-2&lt;/td&gt;
+&lt;td&gt;0-FFFF&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;no&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;  UTF-32&lt;/td&gt;
+&lt;td&gt;0-10FFFF&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;no&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;  UTF-16&lt;/td&gt;
+&lt;td&gt;0-10FFFF&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;yes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;  UTF-8&lt;/td&gt;
+&lt;td&gt;0-10FFFF&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;yes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;  GB2312&lt;/td&gt;
+&lt;td&gt;0-10FFFF&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;yes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;   GBK&lt;/td&gt;
+&lt;td&gt;0-10FFFF&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;yes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt; GB18030&lt;/td&gt;
+&lt;td&gt;0-10FFFF&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;yes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&quot;BOM&quot;&gt;&lt;a href=&quot;#BOM&quot; class=&quot;headerlink&quot; title=&quot;BOM&quot;&gt;&lt;/a&gt;BOM&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;字节顺序标记（Byte Order Mark，BOM），X86平台的PC机默认是小端字节序（FFFE）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;不同的系统往往默认读取字节的顺序是不一样的，分为：高位在前（大端序）、低位在前（小端序），所以不同的字节顺序会影响到对字符的编码和转换；关于字节序详见：&lt;a href=&quot;https://zh.wikipedia.org/wiki/%E5%AD%97%E8%8A%82%E5%BA%8F&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://zh.wikipedia.org/wiki/字节序&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;BOM通常用在文件或者字节流的开头，使用两个字节来标示字节流是高位在前（0xFEFF）还是低位在前（0xFFFE）&lt;/p&gt;
+&lt;p&gt;如果它出现在字节流的中间，则表达零宽度非换行空格的意义，用户看起来就是一个空格。但是从Unicode3.2开始，只能出现在字节流的开头，只能用于标识字节序，除此以外的用法已被舍弃。取而代之的是，使用0x2060来表达零宽度非换行空格的意义&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;有些编码是不依赖于BOM的，比如UTF-8，所有不用添加BOM信息，添加BOM反而会导致某些情况下的乱码&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;文件编码&quot;&gt;&lt;a href=&quot;#文件编码&quot; class=&quot;headerlink&quot; title=&quot;文件编码&quot;&gt;&lt;/a&gt;文件编码&lt;/h2&gt;&lt;p&gt;一般会采用三种方式来判断文本的编码:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;检测文件头标识&lt;br&gt; 根据文件的头几个字节（BOM和编码信息）内容进行判断&lt;/p&gt;
+ &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# 常见的编码头几个字节标识如下&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;EF BB BF       UTF-8 &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;FE FF          UTF-16/UCS-2, little endian &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;FF FE          UTF-16/UCS-2, big endian &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;FF FE 00 00    UTF-32/UCS-4, little endian&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;00 00 FE FF    UTF-32/UCS-4, big-endian&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol&gt;
+&lt;li&gt;基于文件内容根据一定的规则猜测&lt;/li&gt;
+&lt;li&gt;提示用户选择&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;python的chardet模块实现了前两种方式的自动识别，有兴趣可以查看相关源码：&lt;a href=&quot;https://github.com/chardet/chardet&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/chardet/chardet&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;联通的经典笑话&quot;&gt;&lt;a href=&quot;#联通的经典笑话&quot; class=&quot;headerlink&quot; title=&quot;联通的经典笑话&quot;&gt;&lt;/a&gt;联通的经典笑话&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;一个关于文件编码的经典笑话： 使用记事本新建一个txt文件，输入移动两个字然后保存，再用记事本打开，显示正常；再新建一个txt文件，输入联通两个字然后保存，再用记事本打开，出现乱码。因此有人说联通不如移动强是有原因的……也有人说是联通得罪了微软……&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;当然这是一个笑话，原因可以通过理解记事本判断文本的编码的方式来解释：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;保存包含联通两个字的文件时并没有指定编码，默认以ANSI编码保存(中文字符其实就是用GBK编码)&lt;/li&gt;
+&lt;li&gt;联通的GBK编码是：C1 AA CD A8&lt;/li&gt;
+&lt;li&gt;打开文件时因为保存时没有指定编码，所以记事本会使用上面的方式二进行猜测编码&lt;/li&gt;
+&lt;li&gt;恰巧C1 AA CD A8匹配上了UTF-8的规则，于是记事本使用UTF-8显示联通，所以导致乱码&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;众所周知计算机中储存的信息都是用二进制数表示的，而我们在屏幕上看到的英文、汉字等字符都是二进制数转换之后的结果，这个过程中就需要对信息（字符）进行编码和解码工作&lt;/p&gt;
+&lt;p&gt;然而全世界很多个国家都在为自己的字符编码，并且互不想通，不同的语言字符编码值相同却可能代表不同的符号&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;字符(Character)是各种文字和符号的总称，包括各国家文字、标点符号、图形符号、数字等&lt;/li&gt;
+&lt;li&gt;字符集(Character set)是多个字符的集合&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;能不能定义一个超大的字符集，它可以容纳全世界所有的文字字符，再对它们统一进行编码，让每一个字符都对应一个不同的编码值&lt;/strong&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="basic" scheme="http://lxie.xyz/categories/basic/"/>
+    
+    
+      <category term="charset" scheme="http://lxie.xyz/tags/charset/"/>
+    
+      <category term="unicode" scheme="http://lxie.xyz/tags/unicode/"/>
+    
+      <category term="encoding" scheme="http://lxie.xyz/tags/encoding/"/>
+    
+  </entry>
   
   <entry>
     <title>Quorum NRW</title>
