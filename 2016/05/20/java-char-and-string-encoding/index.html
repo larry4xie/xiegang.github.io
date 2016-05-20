@@ -1,0 +1,661 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="java,string,encoding," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="lxie's Notes" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.png?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="要搞清楚Java字符（串）编码，先得区分清楚内码（internal encoding）和外码（external encoding）
+
+内码是程序内部使用的字符编码，特别是某种语言实现其char或String类型在内存里用的内部编码
+外码是程序与外部交互时外部使用的字符编码
+
+Java使用UTF-16作为字符的内码
+然而UTF-16在Java设计之初还是定长编码，后来Unicode涵盖的字符变多了之">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java 字符串编码">
+<meta property="og:url" content="http://lxie.xyz/2016/05/20/java-char-and-string-encoding/index.html">
+<meta property="og:site_name" content="lxie's Notes">
+<meta property="og:description" content="要搞清楚Java字符（串）编码，先得区分清楚内码（internal encoding）和外码（external encoding）
+
+内码是程序内部使用的字符编码，特别是某种语言实现其char或String类型在内存里用的内部编码
+外码是程序与外部交互时外部使用的字符编码
+
+Java使用UTF-16作为字符的内码
+然而UTF-16在Java设计之初还是定长编码，后来Unicode涵盖的字符变多了之">
+<meta property="og:updated_time" content="2016-05-20T06:34:53.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java 字符串编码">
+<meta name="twitter:description" content="要搞清楚Java字符（串）编码，先得区分清楚内码（internal encoding）和外码（external encoding）
+
+内码是程序内部使用的字符编码，特别是某种语言实现其char或String类型在内存里用的内部编码
+外码是程序与外部交互时外部使用的字符编码
+
+Java使用UTF-16作为字符的内码
+然而UTF-16在Java设计之初还是定长编码，后来Unicode涵盖的字符变多了之">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"hide"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> Java 字符串编码 | lxie's Notes </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">lxie's Notes</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Java 字符串编码
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-20T14:29:20+08:00" content="2016-05-20">
+              2016-05-20
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>要搞清楚Java字符（串）编码，先得区分清楚内码（internal encoding）和外码（external encoding）</p>
+<ul>
+<li>内码是程序内部使用的字符编码，特别是某种语言实现其char或String类型在内存里用的内部编码</li>
+<li>外码是程序与外部交互时外部使用的字符编码</li>
+</ul>
+<p><strong>Java使用UTF-16作为字符的内码</strong></p>
+<p>然而UTF-16在Java设计之初还是定长编码，后来Unicode涵盖的字符变多了之后，UTF-16变成了两字节或者四字节的<strong>变长编码</strong></p>
+<a id="more"></a>
+<p>Java也只好跟进，为了实现UTF-16的变长编码语义，Java规定：</p>
+<ul>
+<li>一个完整的字符是一个code point</li>
+<li>一个code point可以对应 1 到 2 个code unit</li>
+<li>一个code unit是固定的两字节</li>
+</ul>
+<p><em>备注：本文中提到的关于：UTF-16编码，Unicode，BOM等信息，不是很清楚的同学可以查看我的另一篇文章 <a href="http://lxie.xyz/2016/05/20/charset-and-encoding/">字符集和字符编码</a></em></p>
+<h2 id="char"><a href="#char" class="headerlink" title="char"></a>char</h2><p>对应上述的一个code unit，固定为两个字节，<strong>也可以理解成是一个两字节的无符号整型</strong></p>
+<p>只有只需1个code unit的code point才可以完整的存在char里，所以char类型不一定能表示一个UTF-16的字符</p>
+<h3 id="unicode"><a href="#unicode" class="headerlink" title="unicode"></a>unicode</h3><p>char是固定的两个字节，所以在java中使用unicode编码只能这样：</p>
+<ul>
+<li>一个char ‘\uXXXX’</li>
+<li>两个char(String) “\uXXXX\uXXXX”</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> u = <span class="string">'\u4E2D'</span>; <span class="comment">// 中</span></span><br><span class="line">String u2 = <span class="string">"\uD801\uDC0F"</span>; <span class="comment">// ? 一个特殊字符, length 2</span></span><br></pre></td></tr></table></figure>
+<h2 id="String"><a href="#String" class="headerlink" title="String"></a>String</h2><p>String作为char的序列，对于两字节的UTF-16只需要用一个char表示，对于需要2个code unit（四字节）的UTF-16可以包含由两个char组成的 “surrogate pair” 来表示</p>
+<p>为此Java的标准库新加了一套用于访问code point的API，而这套API就表现出了UTF-16的变长特性, 包括String, StringBuffer, StringBuilder等</p>
+<h3 id="getBytes"><a href="#getBytes" class="headerlink" title="getBytes"></a>getBytes</h3><blockquote>
+<p>上面说了这么多内码，下面说说我们程序与外部交互时更加常用用的外码</p>
+</blockquote>
+<p>String.getBytes()是一个用于将String的内码转换为指定的外码的方法：</p>
+<ul>
+<li>无参数版使用平台的默认编码作为外码</li>
+<li>有参数版使用参数指定的编码作为外码</li>
+</ul>
+<p>将String的内容用外码编码后，结果放在一个新byte[]返回</p>
+<h3 id="CompressedString"><a href="#CompressedString" class="headerlink" title="CompressedString"></a>CompressedString</h3><blockquote>
+<p>由于Java使用UTF-16作为内码，只有2和4字节两种情况降低了复杂的，然而很多时候我们用到的字符使用一个字节的ASCII就可以表示，使用两个字节无疑增加了开销</p>
+</blockquote>
+<p>所以在Sun JDK6中有一个压缩字符串（-XX:+UseCompressedString）的功能。启用后，String内部存储字符串内容可能用char[]，也可能用byte[]；</p>
+<p><strong>当整个字符串所有字符都在ASCII编码范围内时，就使用byte[]（ASCII序列）来存储，此时字符串就处于压缩状态</strong></p>
+<p>然而压缩字符串这个功能的实现并不够理想，实现的太复杂而且效果未如预期的好，所以后续JDK版本中并没有包含，后续版本可能改进后继续加入该功能</p>
+<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">String str = <span class="string">"z中"</span>;</span><br><span class="line"><span class="comment">// 2</span></span><br><span class="line">System.out.println(str.length());</span><br><span class="line"></span><br><span class="line">String str1 = <span class="string">"z中\uD852\uDF62"</span>;</span><br><span class="line"><span class="comment">// **输出三个字符**, 后面两个char组成一个Unicode字符</span></span><br><span class="line">System.out.println(str1);</span><br><span class="line"><span class="comment">// 4</span></span><br><span class="line">System.out.println(str1.length());</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 1: 默认UTF-8, ASCII 使用一个字节</span></span><br><span class="line">System.out.println(<span class="string">"z"</span>.getBytes().length);</span><br><span class="line"><span class="comment">// 3: 默认UTF-8, 中文使用三个字节</span></span><br><span class="line">System.out.println(<span class="string">"中"</span>.getBytes().length);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 下面两个都是返回4</span></span><br><span class="line"><span class="comment">// 虽然两个字符都是在UTF-16的两个字节表示范围内, 但是UTF-16默认会加上两个BOM信息</span></span><br><span class="line">System.out.println(<span class="string">"z"</span>.getBytes(<span class="string">"UTF-16"</span>).length);</span><br><span class="line">System.out.println(<span class="string">"中"</span>.getBytes(<span class="string">"UTF-16"</span>).length);</span><br><span class="line"><span class="comment">// FEFF4E2D (FEFF为大端序BOM)</span></span><br><span class="line">System.out.println(getHexString(<span class="string">"中"</span>.getBytes(<span class="string">"UTF-16"</span>)));</span><br><span class="line"></span><br><span class="line"><span class="comment">// 下面两个都是返回2, 指定BOM顺序后,不输出BOM信息,</span></span><br><span class="line">System.out.println(<span class="string">"z"</span>.getBytes(<span class="string">"UTF-16BE"</span>).length);</span><br><span class="line">System.out.println(<span class="string">"中"</span>.getBytes(<span class="string">"UTF-16BE"</span>).length);</span><br><span class="line"><span class="comment">// 4E2D</span></span><br><span class="line">System.out.println(getHexString(<span class="string">"中"</span>.getBytes(<span class="string">"UTF-16BE"</span>)));</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/java/" rel="tag">#java</a>
+          
+            <a href="/tags/string/" rel="tag">#string</a>
+          
+            <a href="/tags/encoding/" rel="tag">#encoding</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/05/20/charset-and-encoding/" rel="next" title="字符集和字符编码">
+                <i class="fa fa-chevron-left"></i> 字符集和字符编码
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/avatar.png"
+               alt="lxie" />
+          <p class="site-author-name" itemprop="name">lxie</p>
+          <p class="site-description motion-element" itemprop="description">god is in the detail</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/xiegang" target="_blank">
+                  
+                    <i class="fa fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="mailto:xiegang.1988@gmail.com" target="_blank">
+                  
+                    <i class="fa fa-inbox"></i>
+                  
+                  Email
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        <div class="links-of-blogroll motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#char"><span class="nav-number">1.</span> <span class="nav-text">char</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#unicode"><span class="nav-number">1.1.</span> <span class="nav-text">unicode</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#String"><span class="nav-number">2.</span> <span class="nav-text">String</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#getBytes"><span class="nav-number">2.1.</span> <span class="nav-text">getBytes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CompressedString"><span class="nav-number">2.2.</span> <span class="nav-text">CompressedString</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实例"><span class="nav-number">3.</span> <span class="nav-text">实例</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">lxie</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>
