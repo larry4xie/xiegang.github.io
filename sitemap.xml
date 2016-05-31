@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://lxie.xyz/2016/05/31/common-bit-operations/</loc>
+    
+    <lastmod>2016-05-31T15:07:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://lxie.xyz/2016/05/20/java-char-and-string-encoding/</loc>
     
     <lastmod>2016-05-20T06:34:53.000Z</lastmod>

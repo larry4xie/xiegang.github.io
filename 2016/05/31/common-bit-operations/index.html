@@ -1,0 +1,641 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="bit,java," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="lxie's Notes" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.png?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="在我们查看其它程序源码（比如jdk）的过程中，经常会看到一些位运算的使用，而且有一些场景下我们使用简单常用的位运算既不会太影响可读性又能增加性能，这里列出了一些常见的位运算的使用
+奇偶12// 偶数n &amp;amp; 1 == 0">
+<meta property="og:type" content="article">
+<meta property="og:title" content="常见位运算">
+<meta property="og:url" content="http://lxie.xyz/2016/05/31/common-bit-operations/index.html">
+<meta property="og:site_name" content="lxie's Notes">
+<meta property="og:description" content="在我们查看其它程序源码（比如jdk）的过程中，经常会看到一些位运算的使用，而且有一些场景下我们使用简单常用的位运算既不会太影响可读性又能增加性能，这里列出了一些常见的位运算的使用
+奇偶12// 偶数n &amp;amp; 1 == 0">
+<meta property="og:updated_time" content="2016-05-31T15:07:46.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="常见位运算">
+<meta name="twitter:description" content="在我们查看其它程序源码（比如jdk）的过程中，经常会看到一些位运算的使用，而且有一些场景下我们使用简单常用的位运算既不会太影响可读性又能增加性能，这里列出了一些常见的位运算的使用
+奇偶12// 偶数n &amp;amp; 1 == 0">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"hide"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> 常见位运算 | lxie's Notes </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">lxie's Notes</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                常见位运算
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-31T23:01:13+08:00" content="2016-05-31">
+              2016-05-31
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/basic/" itemprop="url" rel="index">
+                    <span itemprop="name">basic</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>在我们查看其它程序源码（比如jdk）的过程中，经常会看到一些位运算的使用，而且有一些场景下我们使用简单常用的位运算既不会太影响可读性又能增加性能，这里列出了一些常见的位运算的使用</p>
+<h2 id="奇偶"><a href="#奇偶" class="headerlink" title="奇偶"></a>奇偶</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 偶数</span></span><br><span class="line">n &amp; <span class="number">1</span> == <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="交换数"><a href="#交换数" class="headerlink" title="交换数"></a>交换数</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a ^= b;  </span><br><span class="line">b ^= a; <span class="comment">// b = b^(a^b) = a</span></span><br><span class="line">a ^= b; <span class="comment">// a = (a^b)^a = b</span></span><br></pre></td></tr></table></figure>
+<h2 id="变换符号"><a href="#变换符号" class="headerlink" title="变换符号"></a>变换符号</h2><p>变换符号就是正数变成负数，负数变成正数</p>
+<p>由于负数使用补码，所以变换符号只需要：~a + 1</p>
+<h2 id="求绝对值"><a href="#求绝对值" class="headerlink" title="求绝对值"></a>求绝对值</h2><ol>
+<li>获取正负数（0：正数， -1：负数）</li>
+<li>变换符号</li>
+</ol>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// long需要移动63</span></span><br><span class="line"><span class="keyword">int</span> i = a &gt;&gt; <span class="number">31</span>;  </span><br><span class="line">return i == <span class="number">0</span> ? a : (~a + <span class="number">1</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="判断一个数是不是2的幂"><a href="#判断一个数是不是2的幂" class="headerlink" title="判断一个数是不是2的幂"></a>判断一个数是不是2的幂</h2><p>a &amp; (a - 1) == 0</p>
+<h2 id="2的N次方取模"><a href="#2的N次方取模" class="headerlink" title="2的N次方取模"></a>2的N次方取模</h2><p>因为2的N次-1所有的二进制低位都是1</p>
+<p>m &amp; ((1 &lt;&lt; N) - 1) &lt;==&gt; m % 2^N</p>
+<h2 id="高低位交换"><a href="#高低位交换" class="headerlink" title="高低位交换"></a>高低位交换</h2><p>右移得到高位，左移得到高位，移动值为总位数的一般</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 16位数的高低位交换</span></span><br><span class="line">a = (a &gt;&gt; <span class="number">8</span>) | (a &lt;&lt; <span class="number">8</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="N位二进制的范围和取高低位"><a href="#N位二进制的范围和取高低位" class="headerlink" title="N位二进制的范围和取高低位"></a>N位二进制的范围和取高低位</h2><p>N位二进制的范围：0 到 (1 &lt;&lt; N) - 1</p>
+<ol>
+<li>取高16位: a &gt;&gt; 16</li>
+<li>取低16位: a &amp; 0x0000FFFF 或者 a &amp; ((1 &lt;&lt; 16) - 1)</li>
+</ol>
+<h2 id="二进制逆序"><a href="#二进制逆序" class="headerlink" title="二进制逆序"></a>二进制逆序</h2><p>先2位一组进行交换，再以乘以2为一组进行交换，一直到一组数量等于总位数</p>
+<ul>
+<li>(取高位)取16位的 a 的奇数位并将偶数位用0填充用代码实现就是：a &amp; 0xAAAA</li>
+<li>(取低位)取16位的 a 的偶数位并将奇数位用0填充用代码实现就是：a &amp; 0x5555</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// A = 1010, 5 = 0101</span></span><br><span class="line">a = ((a &amp; <span class="number">0xAAAA</span>) &gt;&gt; <span class="number">1</span>) | ((a &amp; <span class="number">0x5555</span>) &lt;&lt; <span class="number">1</span>);</span><br><span class="line"><span class="comment">// C = 1100, 3 = 0011</span></span><br><span class="line">a = ((a &amp; <span class="number">0xCCCC</span>) &gt;&gt; <span class="number">2</span>) | ((a &amp; <span class="number">0x3333</span>) &lt;&lt; <span class="number">2</span>);</span><br><span class="line"><span class="comment">// F0 = 11110000, 0F = 00001111</span></span><br><span class="line">a = ((a &amp; <span class="number">0xF0F0</span>) &gt;&gt; <span class="number">4</span>) | ((a &amp; <span class="number">0x0F0F</span>) &lt;&lt; <span class="number">4</span>);</span><br><span class="line"><span class="comment">// FF00 = 1111111100000000, 00FF = 0000000011111111</span></span><br><span class="line">a = ((a &amp; <span class="number">0xFF00</span>) &gt;&gt; <span class="number">8</span>) | ((a &amp; <span class="number">0x00FF</span>) &lt;&lt; <span class="number">8</span>);</span><br><span class="line"><span class="comment">// FFFF0000, 0000FFFF</span></span><br><span class="line">a = ((a &amp; <span class="number">0xFFFF0000</span>) &gt;&gt; <span class="number">16</span>) | ((a &amp; <span class="number">0x0000FFFF</span>) &lt;&lt; <span class="number">16</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="二进制中1的个数"><a href="#二进制中1的个数" class="headerlink" title="二进制中1的个数"></a>二进制中1的个数</h2><p>先2位一组进行<strong>相加</strong>，再以乘以2为一组进行<strong>相加</strong>，一直到一组数量等于总位数</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 高位与低位相加</span></span><br><span class="line">a = ((a &amp; <span class="number">0xAAAA</span>) &gt;&gt; <span class="number">1</span>) + (a &amp; <span class="number">0x5555</span>);</span><br><span class="line">a = ((a &amp; <span class="number">0xCCCC</span>) &gt;&gt; <span class="number">2</span>) + (a &amp; <span class="number">0x3333</span>);</span><br><span class="line">a = ((a &amp; <span class="number">0xF0F0</span>) &gt;&gt; <span class="number">4</span>) + (a &amp; <span class="number">0x0F0F</span>);</span><br><span class="line">a = ((a &amp; <span class="number">0xFF00</span>) &gt;&gt; <span class="number">8</span>) + (a &amp; <span class="number">0x00FF</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="取不小于m的最小的2的n次方的数"><a href="#取不小于m的最小的2的n次方的数" class="headerlink" title="取不小于m的最小的2的n次方的数"></a>取不小于m的最小的2的n次方的数</h2><p>即：(1 &lt;&lt; n) &gt;= m</p>
+<p>算法基本原理是将这个数的最高位1以下的每一位都置为1，然后+1得到2的n次方的数即可，因此：</p>
+<ul>
+<li>右移1位后取或至少有2个1（最高位的1 + 1）</li>
+<li>类推第二次右移2位后取或至少有4个1（2 + 2）</li>
+<li>类推…</li>
+</ul>
+<p>如果这个数恰好是你所需要的2的n次方的数，就不大好，所以在实际计算的时候会先减去1</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// java HashMap</span></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> <span class="title">tableSizeFor</span><span class="params">(<span class="keyword">int</span> cap)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n = cap - <span class="number">1</span>;</span><br><span class="line">    n |= n &gt;&gt;&gt; <span class="number">1</span>;</span><br><span class="line">    n |= n &gt;&gt;&gt; <span class="number">2</span>;</span><br><span class="line">    n |= n &gt;&gt;&gt; <span class="number">4</span>;</span><br><span class="line">    n |= n &gt;&gt;&gt; <span class="number">8</span>;</span><br><span class="line">    n |= n &gt;&gt;&gt; <span class="number">16</span>;</span><br><span class="line">    <span class="keyword">return</span> (n &lt; <span class="number">0</span>) ? <span class="number">1</span> : (n &gt;= MAXIMUM_CAPACITY) ? MAXIMUM_CAPACITY : n + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/bit/" rel="tag">#bit</a>
+          
+            <a href="/tags/java/" rel="tag">#java</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/05/20/java-char-and-string-encoding/" rel="next" title="Java 字符串编码">
+                <i class="fa fa-chevron-left"></i> Java 字符串编码
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/avatar.png"
+               alt="lxie" />
+          <p class="site-author-name" itemprop="name">lxie</p>
+          <p class="site-description motion-element" itemprop="description">god is in the detail</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/xiegang" target="_blank">
+                  
+                    <i class="fa fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="mailto:xiegang.1988@gmail.com" target="_blank">
+                  
+                    <i class="fa fa-inbox"></i>
+                  
+                  Email
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        <div class="links-of-blogroll motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#奇偶"><span class="nav-number">1.</span> <span class="nav-text">奇偶</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#交换数"><span class="nav-number">2.</span> <span class="nav-text">交换数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变换符号"><span class="nav-number">3.</span> <span class="nav-text">变换符号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#求绝对值"><span class="nav-number">4.</span> <span class="nav-text">求绝对值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#判断一个数是不是2的幂"><span class="nav-number">5.</span> <span class="nav-text">判断一个数是不是2的幂</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2的N次方取模"><span class="nav-number">6.</span> <span class="nav-text">2的N次方取模</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高低位交换"><span class="nav-number">7.</span> <span class="nav-text">高低位交换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#N位二进制的范围和取高低位"><span class="nav-number">8.</span> <span class="nav-text">N位二进制的范围和取高低位</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二进制逆序"><span class="nav-number">9.</span> <span class="nav-text">二进制逆序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二进制中1的个数"><span class="nav-number">10.</span> <span class="nav-text">二进制中1的个数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#取不小于m的最小的2的n次方的数"><span class="nav-number">11.</span> <span class="nav-text">取不小于m的最小的2的n次方的数</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">lxie</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>
