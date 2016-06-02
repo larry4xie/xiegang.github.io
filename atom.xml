@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://lxie.xyz/"/>
-  <updated>2016-05-31T15:07:46.000Z</updated>
+  <updated>2016-06-02T14:33:57.000Z</updated>
   <id>http://lxie.xyz/</id>
   
   <author>
@@ -16,11 +16,109 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>swagger ui with springfox</title>
+    <link href="http://lxie.xyz/2016/06/02/swagger-ui-with-springfox/"/>
+    <id>http://lxie.xyz/2016/06/02/swagger-ui-with-springfox/</id>
+    <published>2016-06-02T14:26:56.000Z</published>
+    <updated>2016-06-02T14:33:57.000Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;swagger&quot;&gt;&lt;a href=&quot;#swagger&quot; class=&quot;headerlink&quot; title=&quot;swagger&quot;&gt;&lt;/a&gt;swagger&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;The World’s Most Popular Framework for APIs (官方的自我评价&lt;code&gt;^_^&lt;/code&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;http://swagger.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Swagger&lt;/a&gt; 是一个规范和完整的框架，用于生成、描述、调用和可视化 RESTful 风格的 Web 服务；类似的服务还有&lt;a href=&quot;https://apiblueprint.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;api blueprint&lt;/a&gt; (基于markdown)&lt;/p&gt;
+&lt;h2 id=&quot;springfox&quot;&gt;&lt;a href=&quot;#springfox&quot; class=&quot;headerlink&quot; title=&quot;springfox&quot;&gt;&lt;/a&gt;springfox&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://springfox.github.io/springfox/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Springfox&lt;/a&gt;的前身是&lt;code&gt;swagger-springmvc&lt;/code&gt;,是一个开源的API doc框架，可以将 spring mvc 的 Controller 转换成以 Swagger ui 文档的形式进行展示展现，效果如下图：&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;&lt;img src=&quot;/media/14648779098020.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;依赖&quot;&gt;&lt;a href=&quot;#依赖&quot; class=&quot;headerlink&quot; title=&quot;依赖&quot;&gt;&lt;/a&gt;依赖&lt;/h2&gt;&lt;figure class=&quot;highlight xml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;dependency&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;io.springfox&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;springfox-swagger2&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;version&lt;/span&gt;&amp;gt;&lt;/span&gt;$&amp;#123;springfox.version&amp;#125;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;version&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;dependency&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;dependency&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;io.springfox&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;springfox-swagger-ui&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;version&lt;/span&gt;&amp;gt;&lt;/span&gt;$&amp;#123;springfox.version&amp;#125;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;version&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;dependency&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;最新版本&lt;a href=&quot;http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22io.springfox%22&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;查询&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;config&quot;&gt;&lt;a href=&quot;#config&quot; class=&quot;headerlink&quot; title=&quot;config&quot;&gt;&lt;/a&gt;config&lt;/h2&gt;&lt;p&gt;springfox的配置主要两点：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;通过 &lt;code&gt;@EnableSwagger2&lt;/code&gt; import springfox 和 spring 相关的配置&lt;/p&gt;
+ &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;// 相关源码&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;@Import(&amp;#123;Swagger2DocumentationConfiguration.class&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;public @interface EnableSwagger2 &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;@Import(&amp;#123; SpringfoxWebMvcConfiguration.class, SwaggerCommonConfiguration.class &amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;@ComponentScan(basePackages = &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;quot;springfox.documentation.swagger2.readers.parameter&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;quot;springfox.documentation.swagger2.web&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;quot;springfox.documentation.swagger2.mappers&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;public class Swagger2DocumentationConfiguration &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  @Bean&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  public JacksonModuleRegistrar swagger2Module() &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    return new Swagger2JacksonModule();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;生成 springfox Docket bean, 如果你需要针对不同的路径生成多个api doc, 你可以生成多个Docket bean实例&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;配置代码如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;@Configuration&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;@EnableSwagger&lt;/span&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;SwaggerConfig&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;meta&quot;&gt;@Bean&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; Docket &lt;span class=&quot;title&quot;&gt;api&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        ApiInfo apiInfo = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; ApiInfoBuilder()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                .title(&lt;span class=&quot;string&quot;&gt;&quot;title&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                .description(&lt;span class=&quot;string&quot;&gt;&quot;description&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                .version(&lt;span class=&quot;string&quot;&gt;&quot;version&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                .termsOfServiceUrl(&lt;span class=&quot;string&quot;&gt;&quot;termsOfServiceUrl&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                .contact(&lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Contact(&lt;span class=&quot;string&quot;&gt;&quot;contact&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;&quot;&lt;/span&gt;))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                .license(&lt;span class=&quot;string&quot;&gt;&quot;license&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                .licenseUrl(&lt;span class=&quot;string&quot;&gt;&quot;licenseUrl&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                .build();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        AlternateTypeRule alternateTypeRule = newRule(&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                typeResolver.resolve(DeferredResult.class,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                typeResolver.resolve(ResponseEntity.class, WildcardType.class)),&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                typeResolver.resolve(WildcardType.class));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        List&amp;lt;ResponseMessage&amp;gt; responseMessages = Lists.newArrayList(&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; ResponseMessageBuilder().code(&lt;span class=&quot;number&quot;&gt;500&lt;/span&gt;).message(&lt;span class=&quot;string&quot;&gt;&quot;500 internal server error&quot;&lt;/span&gt;).responseModel(&lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; ModelRef(&lt;span class=&quot;string&quot;&gt;&quot;Error&quot;&lt;/span&gt;))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                        .build());&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Docket(DocumentationType.SWAGGER_2)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                .groupName(&lt;span class=&quot;string&quot;&gt;&quot;group&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                .apiInfo(apiInfo)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                .select()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                .apis(RequestHandlerSelectors.any())&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;comment&quot;&gt;// custom excludedPathSelector method&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                .paths(excludedPathSelector())&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                .build().pathMapping(&lt;span class=&quot;string&quot;&gt;&quot;/&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                .directModelSubstitute(Date.class, String.class)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                .genericModelSubstitutes(ResponseEntity.class)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                .alternateTypeRules(alternateTypeRule)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                .useDefaultResponseMessages(&lt;span class=&quot;keyword&quot;&gt;false&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                .globalResponseMessage(RequestMethod.GET, responseMessages)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                .forCodeGeneration(&lt;span class=&quot;keyword&quot;&gt;true&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// other Docket api bean (diff pathMapping)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;Docket&quot;&gt;&lt;a href=&quot;#Docket&quot; class=&quot;headerlink&quot; title=&quot;Docket&quot;&gt;&lt;/a&gt;Docket&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;A builder which is intended to be the primary interface into the swagger-springmvc framework. Provides sensible defaults and convenience methods for configuration. &lt;em&gt;(from Class Comment)&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Docket配置说明：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;ApiInfo: 看名字就知道大概含义了，是一些和API相关的的标题、版本等描述信息&lt;/li&gt;
+&lt;li&gt;groupName: 如果你有多个 Docket 实例一般需要制指定 groupName 进行区分，如果只有一个实例可以使用默认&lt;/li&gt;
+&lt;li&gt;apis: 指定匹配哪些 Controller 生成 api&lt;/li&gt;
+&lt;li&gt;paths: 比apis更细的力度，匹配request path, 可用于实现 exclude或者include&lt;/li&gt;
+&lt;li&gt;pathMapping: servlet path mapping&lt;/li&gt;
+&lt;li&gt;globalResponseMessage: 增加或改变一些全局响应的信息&lt;/li&gt;
+&lt;li&gt;securitySchemes、securityContexts: 鉴权相关&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;更多、更详细 Docket 配置见 &lt;a href=&quot;http://springfox.github.io/springfox/docs/current/#dependencies&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;官方文档&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;other&quot;&gt;&lt;a href=&quot;#other&quot; class=&quot;headerlink&quot; title=&quot;other&quot;&gt;&lt;/a&gt;other&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;security: 鉴权相关&lt;/p&gt;
+&lt;p&gt; &lt;a href=&quot;http://springfox.github.io/springfox/docs/current/#configuring-security-schemes-and-contexts-an-overview&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://springfox.github.io/springfox/docs/current/#configuring-security-schemes-and-contexts-an-overview&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;support for JSR-303&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;specifically for @NotNull, @Min, @Max, and @Size&lt;/p&gt;
+&lt;/blockquote&gt;
+ &lt;figure class=&quot;highlight xml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;dependency&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;io.springfox&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;springfox-bean-validators&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;version&lt;/span&gt;&amp;gt;&lt;/span&gt;$&amp;#123;springfox.version&amp;#125;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;version&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;dependency&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+ &lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;@Import&lt;/span&gt;(springfox.bean.validators.configuration.BeanValidatorPluginsConfiguration.class)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;plugins&lt;/p&gt;
+&lt;p&gt; &lt;a href=&quot;http://springfox.github.io/springfox/docs/current/#plugins&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://springfox.github.io/springfox/docs/current/#plugins&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;Annotations&quot;&gt;&lt;a href=&quot;#Annotations&quot; class=&quot;headerlink&quot; title=&quot;@Annotations&quot;&gt;&lt;/a&gt;@Annotations&lt;/h2&gt;&lt;p&gt;Swagger 另外为我们提供了 &lt;code&gt;swagger-annotations&lt;/code&gt; 包，里面提供了若干注解，帮我我们更好的对API进行描述和说明，大部分注解都很容易理解，多试几次就了解了；下面是比较常用的几个注解:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;@ApiIgnore: 这一个比较特殊,&lt;strong&gt;由 springfox 提供&lt;/strong&gt;，用来让我们忽略生成一些API&lt;/li&gt;
+&lt;li&gt;@ApiOperation: 用于对方法的描述&lt;/li&gt;
+&lt;li&gt;@ApiParam: 用于对方法参数的描述&lt;/li&gt;
+&lt;li&gt;@ApiResponse[s]: 用于对请求响应的描述&lt;/li&gt;
+&lt;li&gt;@ApiModel: 用于对输入输出模型的描述&lt;/li&gt;
+&lt;li&gt;@ApiModelProperty: 用于对输入输出模型字段的描述&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;这些注解的使用并不是强制的，如果你对这种侵入性不敏感，建议使用这些注解更好的描述你的API&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;spring-boot-starter&quot;&gt;&lt;a href=&quot;#spring-boot-starter&quot; class=&quot;headerlink&quot; title=&quot;spring-boot-starter&quot;&gt;&lt;/a&gt;spring-boot-starter&lt;/h2&gt;&lt;p&gt;对于大多数情况下上面这些配置都会是相似的，而且相同的配置策略也更加有利于规范和统一，所以这个时候我们可以借助spring boot提供的 starter 特性进行统一处理&lt;/p&gt;
+&lt;p&gt;使用的项目只需要依赖这个 starter, 下面我给出一个我的实现，代码地址如下： &lt;a href=&quot;https://github.com/xiegang/spring-boot-starter-swagger&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;spring-boot-starter-swagger&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;swagger&quot;&gt;&lt;a href=&quot;#swagger&quot; class=&quot;headerlink&quot; title=&quot;swagger&quot;&gt;&lt;/a&gt;swagger&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;The World’s Most Popular Framework for APIs (官方的自我评价&lt;code&gt;^_^&lt;/code&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;http://swagger.io/&quot;&gt;Swagger&lt;/a&gt; 是一个规范和完整的框架，用于生成、描述、调用和可视化 RESTful 风格的 Web 服务；类似的服务还有&lt;a href=&quot;https://apiblueprint.org/&quot;&gt;api blueprint&lt;/a&gt; (基于markdown)&lt;/p&gt;
+&lt;h2 id=&quot;springfox&quot;&gt;&lt;a href=&quot;#springfox&quot; class=&quot;headerlink&quot; title=&quot;springfox&quot;&gt;&lt;/a&gt;springfox&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://springfox.github.io/springfox/&quot;&gt;Springfox&lt;/a&gt;的前身是&lt;code&gt;swagger-springmvc&lt;/code&gt;,是一个开源的API doc框架，可以将 spring mvc 的 Controller 转换成以 Swagger ui 文档的形式进行展示展现，效果如下图：&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="api" scheme="http://lxie.xyz/categories/api/"/>
+    
+    
+      <category term="java" scheme="http://lxie.xyz/tags/java/"/>
+    
+      <category term="api" scheme="http://lxie.xyz/tags/api/"/>
+    
+      <category term="REST" scheme="http://lxie.xyz/tags/REST/"/>
+    
+      <category term="spring-boot" scheme="http://lxie.xyz/tags/spring-boot/"/>
+    
+  </entry>
+  
+  <entry>
     <title>常见位运算</title>
     <link href="http://lxie.xyz/2016/05/31/common-bit-operations/"/>
     <id>http://lxie.xyz/2016/05/31/common-bit-operations/</id>
     <published>2016-05-31T15:01:13.000Z</published>
-    <updated>2016-05-31T15:07:46.000Z</updated>
+    <updated>2016-05-31T15:15:27.000Z</updated>
     
     <content type="html">&lt;p&gt;在我们查看其它程序源码（比如jdk）的过程中，经常会看到一些位运算的使用，而且有一些场景下我们使用简单常用的位运算既不会太影响可读性又能增加性能，这里列出了一些常见的位运算的使用&lt;/p&gt;
 &lt;h2 id=&quot;奇偶&quot;&gt;&lt;a href=&quot;#奇偶&quot; class=&quot;headerlink&quot; title=&quot;奇偶&quot;&gt;&lt;/a&gt;奇偶&lt;/h2&gt;&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 偶数&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;n &amp;amp; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; == &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -36,7 +134,7 @@
 &lt;h2 id=&quot;判断一个数是不是2的幂&quot;&gt;&lt;a href=&quot;#判断一个数是不是2的幂&quot; class=&quot;headerlink&quot; title=&quot;判断一个数是不是2的幂&quot;&gt;&lt;/a&gt;判断一个数是不是2的幂&lt;/h2&gt;&lt;p&gt;a &amp;amp; (a - 1) == 0&lt;/p&gt;
 &lt;h2 id=&quot;2的N次方取模&quot;&gt;&lt;a href=&quot;#2的N次方取模&quot; class=&quot;headerlink&quot; title=&quot;2的N次方取模&quot;&gt;&lt;/a&gt;2的N次方取模&lt;/h2&gt;&lt;p&gt;因为2的N次-1所有的二进制低位都是1&lt;/p&gt;
 &lt;p&gt;m &amp;amp; ((1 &amp;lt;&amp;lt; N) - 1) &amp;lt;==&amp;gt; m % 2^N&lt;/p&gt;
-&lt;h2 id=&quot;高低位交换&quot;&gt;&lt;a href=&quot;#高低位交换&quot; class=&quot;headerlink&quot; title=&quot;高低位交换&quot;&gt;&lt;/a&gt;高低位交换&lt;/h2&gt;&lt;p&gt;右移得到高位，左移得到高位，移动值为总位数的一般&lt;/p&gt;
+&lt;h2 id=&quot;高低位交换&quot;&gt;&lt;a href=&quot;#高低位交换&quot; class=&quot;headerlink&quot; title=&quot;高低位交换&quot;&gt;&lt;/a&gt;高低位交换&lt;/h2&gt;&lt;p&gt;右移得到高位，左移得到高位，移动值为总位数的一半&lt;/p&gt;
 &lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 16位数的高低位交换&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;a = (a &amp;gt;&amp;gt; &lt;span class=&quot;number&quot;&gt;8&lt;/span&gt;) | (a &amp;lt;&amp;lt; &lt;span class=&quot;number&quot;&gt;8&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h2 id=&quot;N位二进制的范围和取高低位&quot;&gt;&lt;a href=&quot;#N位二进制的范围和取高低位&quot; class=&quot;headerlink&quot; title=&quot;N位二进制的范围和取高低位&quot;&gt;&lt;/a&gt;N位二进制的范围和取高低位&lt;/h2&gt;&lt;p&gt;N位二进制的范围：0 到 (1 &amp;lt;&amp;lt; N) - 1&lt;/p&gt;
 &lt;ol&gt;
@@ -145,9 +243,9 @@
     
       <category term="java" scheme="http://lxie.xyz/tags/java/"/>
     
-      <category term="string" scheme="http://lxie.xyz/tags/string/"/>
-    
       <category term="encoding" scheme="http://lxie.xyz/tags/encoding/"/>
+    
+      <category term="string" scheme="http://lxie.xyz/tags/string/"/>
     
   </entry>
   
@@ -408,11 +506,11 @@
       <category term="basic" scheme="http://lxie.xyz/categories/basic/"/>
     
     
-      <category term="encoding" scheme="http://lxie.xyz/tags/encoding/"/>
-    
       <category term="charset" scheme="http://lxie.xyz/tags/charset/"/>
     
       <category term="unicode" scheme="http://lxie.xyz/tags/unicode/"/>
+    
+      <category term="encoding" scheme="http://lxie.xyz/tags/encoding/"/>
     
   </entry>
   

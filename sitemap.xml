@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://lxie.xyz/2016/06/02/swagger-ui-with-springfox/</loc>
+    
+    <lastmod>2016-06-02T14:33:57.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://lxie.xyz/2016/05/31/common-bit-operations/</loc>
     
-    <lastmod>2016-05-31T15:07:46.000Z</lastmod>
+    <lastmod>2016-05-31T15:15:27.000Z</lastmod>
     
   </url>
   

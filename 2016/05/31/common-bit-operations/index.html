@@ -90,7 +90,7 @@
 <meta property="og:site_name" content="lxie's Notes">
 <meta property="og:description" content="在我们查看其它程序源码（比如jdk）的过程中，经常会看到一些位运算的使用，而且有一些场景下我们使用简单常用的位运算既不会太影响可读性又能增加性能，这里列出了一些常见的位运算的使用
 奇偶12// 偶数n &amp;amp; 1 == 0">
-<meta property="og:updated_time" content="2016-05-31T15:07:46.000Z">
+<meta property="og:updated_time" content="2016-05-31T15:15:27.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="常见位运算">
 <meta name="twitter:description" content="在我们查看其它程序源码（比如jdk）的过程中，经常会看到一些位运算的使用，而且有一些场景下我们使用简单常用的位运算既不会太影响可读性又能增加性能，这里列出了一些常见的位运算的使用
@@ -306,7 +306,7 @@
 <h2 id="判断一个数是不是2的幂"><a href="#判断一个数是不是2的幂" class="headerlink" title="判断一个数是不是2的幂"></a>判断一个数是不是2的幂</h2><p>a &amp; (a - 1) == 0</p>
 <h2 id="2的N次方取模"><a href="#2的N次方取模" class="headerlink" title="2的N次方取模"></a>2的N次方取模</h2><p>因为2的N次-1所有的二进制低位都是1</p>
 <p>m &amp; ((1 &lt;&lt; N) - 1) &lt;==&gt; m % 2^N</p>
-<h2 id="高低位交换"><a href="#高低位交换" class="headerlink" title="高低位交换"></a>高低位交换</h2><p>右移得到高位，左移得到高位，移动值为总位数的一般</p>
+<h2 id="高低位交换"><a href="#高低位交换" class="headerlink" title="高低位交换"></a>高低位交换</h2><p>右移得到高位，左移得到高位，移动值为总位数的一半</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 16位数的高低位交换</span></span><br><span class="line">a = (a &gt;&gt; <span class="number">8</span>) | (a &lt;&lt; <span class="number">8</span>);</span><br></pre></td></tr></table></figure>
 <h2 id="N位二进制的范围和取高低位"><a href="#N位二进制的范围和取高低位" class="headerlink" title="N位二进制的范围和取高低位"></a>N位二进制的范围和取高低位</h2><p>N位二进制的范围：0 到 (1 &lt;&lt; N) - 1</p>
 <ol>
@@ -368,6 +368,10 @@
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/06/02/swagger-ui-with-springfox/" rel="prev" title="swagger ui with springfox">
+                swagger ui with springfox <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -435,7 +439,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -443,7 +447,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -452,7 +456,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">18</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
