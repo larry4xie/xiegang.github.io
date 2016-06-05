@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>http://lxie.xyz/2016/06/02/swagger-ui-with-springfox/</loc>
+    <lastmod>2016-06-02T14:46:28.000Z</lastmod>
+    <data>
+        <display>
+        <title>swagger ui with springfox</title>
+        <pubTime>2016-06-02T14:26:56.000Z</pubTime>
+        
+        <tag>java</tag>
+         
+        <tag>api</tag>
+         
+        <tag>REST</tag>
+         
+        <tag>spring-boot</tag>
+         
+         
+           
+             
+              <breadCrumb title="api" url="http://lxie.xyz/categories/api/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://lxie.xyz/2016/05/31/common-bit-operations/</loc>
+    <lastmod>2016-05-31T15:15:27.000Z</lastmod>
+    <data>
+        <display>
+        <title>常见位运算</title>
+        <pubTime>2016-05-31T15:01:13.000Z</pubTime>
+        
+        <tag>bit</tag>
+         
+        <tag>java</tag>
+         
+         
+           
+             
+              <breadCrumb title="basic" url="http://lxie.xyz/categories/basic/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://lxie.xyz/2016/05/20/java-char-and-string-encoding/</loc>
+    <lastmod>2016-05-20T06:34:53.000Z</lastmod>
+    <data>
+        <display>
+        <title>Java 字符串编码</title>
+        <pubTime>2016-05-20T06:29:20.000Z</pubTime>
+        
+        <tag>encoding</tag>
+         
+        <tag>java</tag>
+         
+        <tag>string</tag>
+         
+         
+           
+             
+              <breadCrumb title="java" url="http://lxie.xyz/categories/java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://lxie.xyz/2016/05/20/charset-and-encoding/</loc>
+    <lastmod>2016-05-20T06:33:26.000Z</lastmod>
+    <data>
+        <display>
+        <title>字符集和字符编码</title>
+        <pubTime>2016-05-19T16:22:38.000Z</pubTime>
+        
+        <tag>charset</tag>
+         
+        <tag>unicode</tag>
+         
+        <tag>encoding</tag>
+         
+         
+           
+             
+              <breadCrumb title="basic" url="http://lxie.xyz/categories/basic/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://lxie.xyz/2016/05/05/zsh-plugins-like-fish/</loc>
+    <lastmod>2016-05-17T09:31:51.000Z</lastmod>
+    <data>
+        <display>
+        <title>zsh plugins like fish shell</title>
+        <pubTime>2016-05-05T06:25:15.000Z</pubTime>
+        
+        <tag>tools</tag>
+         
+        <tag>zsh</tag>
+         
+         
+           
+             
+              <breadCrumb title="tools" url="http://lxie.xyz/categories/tools/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://lxie.xyz/2016/05/16/quorum-nrw/</loc>
+    <lastmod>2016-05-16T08:53:55.000Z</lastmod>
+    <data>
+        <display>
+        <title>Quorum NRW</title>
+        <pubTime>2016-05-16T08:46:52.000Z</pubTime>
+        
+        <tag>分布式</tag>
+         
+        <tag>quorum</tag>
+         
+        <tag>最终一致性</tag>
+         
+         
+           
+             
+              <breadCrumb title="分布式" url="http://lxie.xyz/categories/%E5%88%86%E5%B8%83%E5%BC%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+</urlset>
