@@ -22,74 +22,74 @@
     <published>2016-06-02T14:26:56.000Z</published>
     <updated>2016-06-02T14:46:28.000Z</updated>
     
-    <content type="html">&lt;h2 id=&quot;swagger&quot;&gt;&lt;a href=&quot;#swagger&quot; class=&quot;headerlink&quot; title=&quot;swagger&quot;&gt;&lt;/a&gt;swagger&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;The World’s Most Popular Framework for APIs (官方的自我评价&lt;code&gt;^_^&lt;/code&gt;)&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;http://swagger.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Swagger&lt;/a&gt; 是一个规范和完整的框架，用于生成、描述、调用和可视化 RESTful 风格的 Web 服务；类似的服务还有&lt;a href=&quot;https://apiblueprint.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;api blueprint&lt;/a&gt; (基于markdown)&lt;/p&gt;
-&lt;h2 id=&quot;springfox&quot;&gt;&lt;a href=&quot;#springfox&quot; class=&quot;headerlink&quot; title=&quot;springfox&quot;&gt;&lt;/a&gt;springfox&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://springfox.github.io/springfox/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Springfox&lt;/a&gt;的前身是&lt;code&gt;swagger-springmvc&lt;/code&gt;,是一个开源的API doc框架，可以将 spring mvc 的 Controller 转换成以 Swagger ui 文档的形式进行展示展现，效果如下图：&lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;p&gt;&lt;img src=&quot;/media/14648779098020.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;依赖&quot;&gt;&lt;a href=&quot;#依赖&quot; class=&quot;headerlink&quot; title=&quot;依赖&quot;&gt;&lt;/a&gt;依赖&lt;/h2&gt;&lt;figure class=&quot;highlight xml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;dependency&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;io.springfox&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;springfox-swagger2&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;version&lt;/span&gt;&amp;gt;&lt;/span&gt;$&amp;#123;springfox.version&amp;#125;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;version&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;dependency&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;dependency&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;io.springfox&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;springfox-swagger-ui&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;version&lt;/span&gt;&amp;gt;&lt;/span&gt;$&amp;#123;springfox.version&amp;#125;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;version&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;dependency&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;blockquote&gt;
-&lt;p&gt;最新版本&lt;a href=&quot;http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22io.springfox%22&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;查询&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;config&quot;&gt;&lt;a href=&quot;#config&quot; class=&quot;headerlink&quot; title=&quot;config&quot;&gt;&lt;/a&gt;config&lt;/h2&gt;&lt;p&gt;springfox的配置主要两点：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;通过 &lt;code&gt;@EnableSwagger2&lt;/code&gt; import springfox 和 spring 相关的配置&lt;/p&gt;
- &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;// 相关源码&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;@Import(&amp;#123;Swagger2DocumentationConfiguration.class&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;public @interface EnableSwagger2 &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;@Import(&amp;#123; SpringfoxWebMvcConfiguration.class, SwaggerCommonConfiguration.class &amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;@ComponentScan(basePackages = &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;quot;springfox.documentation.swagger2.readers.parameter&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;quot;springfox.documentation.swagger2.web&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;quot;springfox.documentation.swagger2.mappers&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;public class Swagger2DocumentationConfiguration &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  @Bean&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  public JacksonModuleRegistrar swagger2Module() &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    return new Swagger2JacksonModule();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;生成 springfox Docket bean, 如果你需要针对不同的路径生成多个api doc, 你可以生成多个Docket bean实例&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;然后通过如下地址进行访问: &lt;a href=&quot;http://localhost:8080/swagger-ui.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://host:port/swagger-ui.html&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;配置代码如下：&lt;/p&gt;
-&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;@Configuration&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;@EnableSwagger&lt;/span&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;SwaggerConfig&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;meta&quot;&gt;@Bean&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; Docket &lt;span class=&quot;title&quot;&gt;api&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        ApiInfo apiInfo = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; ApiInfoBuilder()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                .title(&lt;span class=&quot;string&quot;&gt;&quot;title&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                .description(&lt;span class=&quot;string&quot;&gt;&quot;description&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                .version(&lt;span class=&quot;string&quot;&gt;&quot;version&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                .termsOfServiceUrl(&lt;span class=&quot;string&quot;&gt;&quot;termsOfServiceUrl&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                .contact(&lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Contact(&lt;span class=&quot;string&quot;&gt;&quot;contact&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;&quot;&lt;/span&gt;))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                .license(&lt;span class=&quot;string&quot;&gt;&quot;license&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                .licenseUrl(&lt;span class=&quot;string&quot;&gt;&quot;licenseUrl&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                .build();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        AlternateTypeRule alternateTypeRule = newRule(&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                typeResolver.resolve(DeferredResult.class,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                typeResolver.resolve(ResponseEntity.class, WildcardType.class)),&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                typeResolver.resolve(WildcardType.class));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        List&amp;lt;ResponseMessage&amp;gt; responseMessages = Lists.newArrayList(&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; ResponseMessageBuilder().code(&lt;span class=&quot;number&quot;&gt;500&lt;/span&gt;).message(&lt;span class=&quot;string&quot;&gt;&quot;500 internal server error&quot;&lt;/span&gt;).responseModel(&lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; ModelRef(&lt;span class=&quot;string&quot;&gt;&quot;Error&quot;&lt;/span&gt;))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                        .build());&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Docket(DocumentationType.SWAGGER_2)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                .groupName(&lt;span class=&quot;string&quot;&gt;&quot;group&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                .apiInfo(apiInfo)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                .select()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                .apis(RequestHandlerSelectors.any())&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;comment&quot;&gt;// custom excludedPathSelector method&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                .paths(excludedPathSelector())&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                .build().pathMapping(&lt;span class=&quot;string&quot;&gt;&quot;/&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                .directModelSubstitute(Date.class, String.class)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                .genericModelSubstitutes(ResponseEntity.class)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                .alternateTypeRules(alternateTypeRule)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                .useDefaultResponseMessages(&lt;span class=&quot;keyword&quot;&gt;false&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                .globalResponseMessage(RequestMethod.GET, responseMessages)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                .forCodeGeneration(&lt;span class=&quot;keyword&quot;&gt;true&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// other Docket api bean (diff pathMapping)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;Docket&quot;&gt;&lt;a href=&quot;#Docket&quot; class=&quot;headerlink&quot; title=&quot;Docket&quot;&gt;&lt;/a&gt;Docket&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;A builder which is intended to be the primary interface into the swagger-springmvc framework. Provides sensible defaults and convenience methods for configuration. &lt;em&gt;(from Class Comment)&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Docket配置说明：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;ApiInfo: 看名字就知道大概含义了，是一些和API相关的的标题、版本等描述信息&lt;/li&gt;
-&lt;li&gt;groupName: 如果你有多个 Docket 实例一般需要制指定 groupName 进行区分，如果只有一个实例可以使用默认&lt;/li&gt;
-&lt;li&gt;apis: 指定匹配哪些 Controller 生成 api&lt;/li&gt;
-&lt;li&gt;paths: 比apis更细的力度，匹配request path, 可用于实现 exclude或者include&lt;/li&gt;
-&lt;li&gt;pathMapping: servlet path mapping&lt;/li&gt;
-&lt;li&gt;globalResponseMessage: 增加或改变一些全局响应的信息&lt;/li&gt;
-&lt;li&gt;securitySchemes、securityContexts: 鉴权相关&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;更多、更详细 Docket 配置见 &lt;a href=&quot;http://springfox.github.io/springfox/docs/current/#dependencies&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;官方文档&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;other&quot;&gt;&lt;a href=&quot;#other&quot; class=&quot;headerlink&quot; title=&quot;other&quot;&gt;&lt;/a&gt;other&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;security: 鉴权相关&lt;/p&gt;
-&lt;p&gt; &lt;a href=&quot;http://springfox.github.io/springfox/docs/current/#configuring-security-schemes-and-contexts-an-overview&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://springfox.github.io/springfox/docs/current/#configuring-security-schemes-and-contexts-an-overview&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;support for JSR-303&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;specifically for @NotNull, @Min, @Max, and @Size&lt;/p&gt;
-&lt;/blockquote&gt;
- &lt;figure class=&quot;highlight xml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;dependency&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;io.springfox&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;springfox-bean-validators&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;version&lt;/span&gt;&amp;gt;&lt;/span&gt;$&amp;#123;springfox.version&amp;#125;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;version&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;dependency&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
- &lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;@Import&lt;/span&gt;(springfox.bean.validators.configuration.BeanValidatorPluginsConfiguration.class)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;plugins&lt;/p&gt;
-&lt;p&gt; &lt;a href=&quot;http://springfox.github.io/springfox/docs/current/#plugins&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://springfox.github.io/springfox/docs/current/#plugins&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&quot;Annotations&quot;&gt;&lt;a href=&quot;#Annotations&quot; class=&quot;headerlink&quot; title=&quot;@Annotations&quot;&gt;&lt;/a&gt;@Annotations&lt;/h2&gt;&lt;p&gt;Swagger 另外为我们提供了 &lt;code&gt;swagger-annotations&lt;/code&gt; 包，里面提供了若干注解，帮我我们更好的对API进行描述和说明，大部分注解都很容易理解，多试几次就了解了；下面是比较常用的几个注解:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;@ApiIgnore: 这一个比较特殊,&lt;strong&gt;由 springfox 提供&lt;/strong&gt;，用来让我们忽略生成一些API&lt;/li&gt;
-&lt;li&gt;@ApiOperation: 用于对方法的描述&lt;/li&gt;
-&lt;li&gt;@ApiParam: 用于对方法参数的描述&lt;/li&gt;
-&lt;li&gt;@ApiResponse[s]: 用于对请求响应的描述&lt;/li&gt;
-&lt;li&gt;@ApiModel: 用于对输入输出模型的描述&lt;/li&gt;
-&lt;li&gt;@ApiModelProperty: 用于对输入输出模型字段的描述&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;这些注解的使用并不是强制的，如果你对这种侵入性不敏感，建议使用这些注解更好的描述你的API&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&quot;spring-boot-starter&quot;&gt;&lt;a href=&quot;#spring-boot-starter&quot; class=&quot;headerlink&quot; title=&quot;spring-boot-starter&quot;&gt;&lt;/a&gt;spring-boot-starter&lt;/h2&gt;&lt;p&gt;对于大多数情况下上面这些配置都会是相似的，而且相同的配置策略也更加有利于规范和统一，所以这个时候我们可以借助spring boot提供的 starter 特性进行统一处理&lt;/p&gt;
-&lt;p&gt;使用的项目只需要依赖这个 starter, 下面我给出一个我的实现，代码地址如下： &lt;a href=&quot;https://github.com/xiegang/spring-boot-starter-swagger&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;spring-boot-starter-swagger&lt;/a&gt;&lt;/p&gt;
-</content>
+    <content type="html"><![CDATA[<h2 id="swagger"><a href="#swagger" class="headerlink" title="swagger"></a>swagger</h2><blockquote>
+<p>The World’s Most Popular Framework for APIs (官方的自我评价<code>^_^</code>)</p>
+</blockquote>
+<p><a href="http://swagger.io/" target="_blank" rel="external">Swagger</a> 是一个规范和完整的框架，用于生成、描述、调用和可视化 RESTful 风格的 Web 服务；类似的服务还有<a href="https://apiblueprint.org/" target="_blank" rel="external">api blueprint</a> (基于markdown)</p>
+<h2 id="springfox"><a href="#springfox" class="headerlink" title="springfox"></a>springfox</h2><p><a href="http://springfox.github.io/springfox/" target="_blank" rel="external">Springfox</a>的前身是<code>swagger-springmvc</code>,是一个开源的API doc框架，可以将 spring mvc 的 Controller 转换成以 Swagger ui 文档的形式进行展示展现，效果如下图：</p>
+<a id="more"></a>
+<p><img src="/media/14648779098020.jpg" alt=""></p>
+<h2 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.springfox<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>springfox-swagger2<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;springfox.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.springfox<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>springfox-swagger-ui<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;springfox.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>最新版本<a href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22io.springfox%22" target="_blank" rel="external">查询</a></p>
+</blockquote>
+<h2 id="config"><a href="#config" class="headerlink" title="config"></a>config</h2><p>springfox的配置主要两点：</p>
+<ol>
+<li><p>通过 <code>@EnableSwagger2</code> import springfox 和 spring 相关的配置</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">// 相关源码</span><br><span class="line">@Import(&#123;Swagger2DocumentationConfiguration.class&#125;)</span><br><span class="line">public @interface EnableSwagger2 &#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">@Import(&#123; SpringfoxWebMvcConfiguration.class, SwaggerCommonConfiguration.class &#125;)</span><br><span class="line">@ComponentScan(basePackages = &#123;</span><br><span class="line">    &quot;springfox.documentation.swagger2.readers.parameter&quot;,</span><br><span class="line">    &quot;springfox.documentation.swagger2.web&quot;,</span><br><span class="line">    &quot;springfox.documentation.swagger2.mappers&quot;</span><br><span class="line">&#125;)</span><br><span class="line">public class Swagger2DocumentationConfiguration &#123;</span><br><span class="line">  @Bean</span><br><span class="line">  public JacksonModuleRegistrar swagger2Module() &#123;</span><br><span class="line">    return new Swagger2JacksonModule();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>生成 springfox Docket bean, 如果你需要针对不同的路径生成多个api doc, 你可以生成多个Docket bean实例</p>
+</li>
+</ol>
+<p>然后通过如下地址进行访问: <a href="http://localhost:8080/swagger-ui.html" target="_blank" rel="external">http://host:port/swagger-ui.html</a></p>
+<p>配置代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@EnableSwagger</span>2</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SwaggerConfig</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Docket <span class="title">api</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        ApiInfo apiInfo = <span class="keyword">new</span> ApiInfoBuilder()</span><br><span class="line">                .title(<span class="string">"title"</span>)</span><br><span class="line">                .description(<span class="string">"description"</span>)</span><br><span class="line">                .version(<span class="string">"version"</span>)</span><br><span class="line">                .termsOfServiceUrl(<span class="string">"termsOfServiceUrl"</span>)</span><br><span class="line">                .contact(<span class="keyword">new</span> Contact(<span class="string">"contact"</span>, <span class="string">""</span>, <span class="string">""</span>))</span><br><span class="line">                .license(<span class="string">"license"</span>)</span><br><span class="line">                .licenseUrl(<span class="string">"licenseUrl"</span>)</span><br><span class="line">                .build();</span><br><span class="line"></span><br><span class="line">        AlternateTypeRule alternateTypeRule = newRule(</span><br><span class="line">                typeResolver.resolve(DeferredResult.class,</span><br><span class="line">                typeResolver.resolve(ResponseEntity.class, WildcardType.class)),</span><br><span class="line">                typeResolver.resolve(WildcardType.class));</span><br><span class="line"></span><br><span class="line">        List&lt;ResponseMessage&gt; responseMessages = Lists.newArrayList(</span><br><span class="line">                <span class="keyword">new</span> ResponseMessageBuilder().code(<span class="number">500</span>).message(<span class="string">"500 internal server error"</span>).responseModel(<span class="keyword">new</span> ModelRef(<span class="string">"Error"</span>))</span><br><span class="line">                        .build());</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Docket(DocumentationType.SWAGGER_2)</span><br><span class="line">                .groupName(<span class="string">"group"</span>)</span><br><span class="line">                .apiInfo(apiInfo)</span><br><span class="line">                .select()</span><br><span class="line">                .apis(RequestHandlerSelectors.any())</span><br><span class="line">                <span class="comment">// custom excludedPathSelector method</span></span><br><span class="line">                .paths(excludedPathSelector())</span><br><span class="line">                .build().pathMapping(<span class="string">"/"</span>)</span><br><span class="line">                .directModelSubstitute(Date.class, String.class)</span><br><span class="line">                .genericModelSubstitutes(ResponseEntity.class)</span><br><span class="line">                .alternateTypeRules(alternateTypeRule)</span><br><span class="line">                .useDefaultResponseMessages(<span class="keyword">false</span>)</span><br><span class="line">                .globalResponseMessage(RequestMethod.GET, responseMessages)</span><br><span class="line">                .forCodeGeneration(<span class="keyword">true</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// other Docket api bean (diff pathMapping)</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Docket"><a href="#Docket" class="headerlink" title="Docket"></a>Docket</h3><blockquote>
+<p>A builder which is intended to be the primary interface into the swagger-springmvc framework. Provides sensible defaults and convenience methods for configuration. <em>(from Class Comment)</em></p>
+</blockquote>
+<p>Docket配置说明：</p>
+<ol>
+<li>ApiInfo: 看名字就知道大概含义了，是一些和API相关的的标题、版本等描述信息</li>
+<li>groupName: 如果你有多个 Docket 实例一般需要制指定 groupName 进行区分，如果只有一个实例可以使用默认</li>
+<li>apis: 指定匹配哪些 Controller 生成 api</li>
+<li>paths: 比apis更细的力度，匹配request path, 可用于实现 exclude或者include</li>
+<li>pathMapping: servlet path mapping</li>
+<li>globalResponseMessage: 增加或改变一些全局响应的信息</li>
+<li>securitySchemes、securityContexts: 鉴权相关</li>
+</ol>
+<p>更多、更详细 Docket 配置见 <a href="http://springfox.github.io/springfox/docs/current/#dependencies" target="_blank" rel="external">官方文档</a></p>
+<h3 id="other"><a href="#other" class="headerlink" title="other"></a>other</h3><ol>
+<li><p>security: 鉴权相关</p>
+<p> <a href="http://springfox.github.io/springfox/docs/current/#configuring-security-schemes-and-contexts-an-overview" target="_blank" rel="external">http://springfox.github.io/springfox/docs/current/#configuring-security-schemes-and-contexts-an-overview</a></p>
+</li>
+</ol>
+<ol>
+<li><p>support for JSR-303</p>
+<blockquote>
+<p>specifically for @NotNull, @Min, @Max, and @Size</p>
+</blockquote>
+ <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.springfox<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>springfox-bean-validators<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;springfox.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Import</span>(springfox.bean.validators.configuration.BeanValidatorPluginsConfiguration.class)</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol>
+<li><p>plugins</p>
+<p> <a href="http://springfox.github.io/springfox/docs/current/#plugins" target="_blank" rel="external">http://springfox.github.io/springfox/docs/current/#plugins</a></p>
+</li>
+</ol>
+<h2 id="Annotations"><a href="#Annotations" class="headerlink" title="@Annotations"></a>@Annotations</h2><p>Swagger 另外为我们提供了 <code>swagger-annotations</code> 包，里面提供了若干注解，帮我我们更好的对API进行描述和说明，大部分注解都很容易理解，多试几次就了解了；下面是比较常用的几个注解:</p>
+<ol>
+<li>@ApiIgnore: 这一个比较特殊,<strong>由 springfox 提供</strong>，用来让我们忽略生成一些API</li>
+<li>@ApiOperation: 用于对方法的描述</li>
+<li>@ApiParam: 用于对方法参数的描述</li>
+<li>@ApiResponse[s]: 用于对请求响应的描述</li>
+<li>@ApiModel: 用于对输入输出模型的描述</li>
+<li>@ApiModelProperty: 用于对输入输出模型字段的描述</li>
+</ol>
+<p><strong>这些注解的使用并不是强制的，如果你对这种侵入性不敏感，建议使用这些注解更好的描述你的API</strong></p>
+<h2 id="spring-boot-starter"><a href="#spring-boot-starter" class="headerlink" title="spring-boot-starter"></a>spring-boot-starter</h2><p>对于大多数情况下上面这些配置都会是相似的，而且相同的配置策略也更加有利于规范和统一，所以这个时候我们可以借助spring boot提供的 starter 特性进行统一处理</p>
+<p>使用的项目只需要依赖这个 starter, 下面我给出一个我的实现，代码地址如下： <a href="https://github.com/xiegang/spring-boot-starter-swagger" target="_blank" rel="external">spring-boot-starter-swagger</a></p>
+]]></content>
     
     <summary type="html">
     
@@ -121,45 +121,45 @@
     <published>2016-05-31T15:01:13.000Z</published>
     <updated>2016-05-31T15:15:27.000Z</updated>
     
-    <content type="html">&lt;p&gt;在我们查看其它程序源码（比如jdk）的过程中，经常会看到一些位运算的使用，而且有一些场景下我们使用简单常用的位运算既不会太影响可读性又能增加性能，这里列出了一些常见的位运算的使用&lt;/p&gt;
-&lt;h2 id=&quot;奇偶&quot;&gt;&lt;a href=&quot;#奇偶&quot; class=&quot;headerlink&quot; title=&quot;奇偶&quot;&gt;&lt;/a&gt;奇偶&lt;/h2&gt;&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 偶数&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;n &amp;amp; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; == &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h2 id=&quot;交换数&quot;&gt;&lt;a href=&quot;#交换数&quot; class=&quot;headerlink&quot; title=&quot;交换数&quot;&gt;&lt;/a&gt;交换数&lt;/h2&gt;&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;a ^= b;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;b ^= a; &lt;span class=&quot;comment&quot;&gt;// b = b^(a^b) = a&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;a ^= b; &lt;span class=&quot;comment&quot;&gt;// a = (a^b)^a = b&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&quot;变换符号&quot;&gt;&lt;a href=&quot;#变换符号&quot; class=&quot;headerlink&quot; title=&quot;变换符号&quot;&gt;&lt;/a&gt;变换符号&lt;/h2&gt;&lt;p&gt;变换符号就是正数变成负数，负数变成正数&lt;/p&gt;
-&lt;p&gt;由于负数使用补码，所以变换符号只需要：~a + 1&lt;/p&gt;
-&lt;h2 id=&quot;求绝对值&quot;&gt;&lt;a href=&quot;#求绝对值&quot; class=&quot;headerlink&quot; title=&quot;求绝对值&quot;&gt;&lt;/a&gt;求绝对值&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;获取正负数（0：正数， -1：负数）&lt;/li&gt;
-&lt;li&gt;变换符号&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// long需要移动63&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = a &amp;gt;&amp;gt; &lt;span class=&quot;number&quot;&gt;31&lt;/span&gt;;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;return i == &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; ? a : (~a + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&quot;判断一个数是不是2的幂&quot;&gt;&lt;a href=&quot;#判断一个数是不是2的幂&quot; class=&quot;headerlink&quot; title=&quot;判断一个数是不是2的幂&quot;&gt;&lt;/a&gt;判断一个数是不是2的幂&lt;/h2&gt;&lt;p&gt;a &amp;amp; (a - 1) == 0&lt;/p&gt;
-&lt;h2 id=&quot;2的N次方取模&quot;&gt;&lt;a href=&quot;#2的N次方取模&quot; class=&quot;headerlink&quot; title=&quot;2的N次方取模&quot;&gt;&lt;/a&gt;2的N次方取模&lt;/h2&gt;&lt;p&gt;因为2的N次-1所有的二进制低位都是1&lt;/p&gt;
-&lt;p&gt;m &amp;amp; ((1 &amp;lt;&amp;lt; N) - 1) &amp;lt;==&amp;gt; m % 2^N&lt;/p&gt;
-&lt;h2 id=&quot;高低位交换&quot;&gt;&lt;a href=&quot;#高低位交换&quot; class=&quot;headerlink&quot; title=&quot;高低位交换&quot;&gt;&lt;/a&gt;高低位交换&lt;/h2&gt;&lt;p&gt;右移得到高位，左移得到高位，移动值为总位数的一半&lt;/p&gt;
-&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 16位数的高低位交换&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;a = (a &amp;gt;&amp;gt; &lt;span class=&quot;number&quot;&gt;8&lt;/span&gt;) | (a &amp;lt;&amp;lt; &lt;span class=&quot;number&quot;&gt;8&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&quot;N位二进制的范围和取高低位&quot;&gt;&lt;a href=&quot;#N位二进制的范围和取高低位&quot; class=&quot;headerlink&quot; title=&quot;N位二进制的范围和取高低位&quot;&gt;&lt;/a&gt;N位二进制的范围和取高低位&lt;/h2&gt;&lt;p&gt;N位二进制的范围：0 到 (1 &amp;lt;&amp;lt; N) - 1&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;取高16位: a &amp;gt;&amp;gt; 16&lt;/li&gt;
-&lt;li&gt;取低16位: a &amp;amp; 0x0000FFFF 或者 a &amp;amp; ((1 &amp;lt;&amp;lt; 16) - 1)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&quot;二进制逆序&quot;&gt;&lt;a href=&quot;#二进制逆序&quot; class=&quot;headerlink&quot; title=&quot;二进制逆序&quot;&gt;&lt;/a&gt;二进制逆序&lt;/h2&gt;&lt;p&gt;先2位一组进行交换，再以乘以2为一组进行交换，一直到一组数量等于总位数&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;(取高位)取16位的 a 的奇数位并将偶数位用0填充用代码实现就是：a &amp;amp; 0xAAAA&lt;/li&gt;
-&lt;li&gt;(取低位)取16位的 a 的偶数位并将奇数位用0填充用代码实现就是：a &amp;amp; 0x5555&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// A = 1010, 5 = 0101&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;a = ((a &amp;amp; &lt;span class=&quot;number&quot;&gt;0xAAAA&lt;/span&gt;) &amp;gt;&amp;gt; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;) | ((a &amp;amp; &lt;span class=&quot;number&quot;&gt;0x5555&lt;/span&gt;) &amp;lt;&amp;lt; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// C = 1100, 3 = 0011&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;a = ((a &amp;amp; &lt;span class=&quot;number&quot;&gt;0xCCCC&lt;/span&gt;) &amp;gt;&amp;gt; &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;) | ((a &amp;amp; &lt;span class=&quot;number&quot;&gt;0x3333&lt;/span&gt;) &amp;lt;&amp;lt; &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// F0 = 11110000, 0F = 00001111&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;a = ((a &amp;amp; &lt;span class=&quot;number&quot;&gt;0xF0F0&lt;/span&gt;) &amp;gt;&amp;gt; &lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;) | ((a &amp;amp; &lt;span class=&quot;number&quot;&gt;0x0F0F&lt;/span&gt;) &amp;lt;&amp;lt; &lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// FF00 = 1111111100000000, 00FF = 0000000011111111&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;a = ((a &amp;amp; &lt;span class=&quot;number&quot;&gt;0xFF00&lt;/span&gt;) &amp;gt;&amp;gt; &lt;span class=&quot;number&quot;&gt;8&lt;/span&gt;) | ((a &amp;amp; &lt;span class=&quot;number&quot;&gt;0x00FF&lt;/span&gt;) &amp;lt;&amp;lt; &lt;span class=&quot;number&quot;&gt;8&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// FFFF0000, 0000FFFF&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;a = ((a &amp;amp; &lt;span class=&quot;number&quot;&gt;0xFFFF0000&lt;/span&gt;) &amp;gt;&amp;gt; &lt;span class=&quot;number&quot;&gt;16&lt;/span&gt;) | ((a &amp;amp; &lt;span class=&quot;number&quot;&gt;0x0000FFFF&lt;/span&gt;) &amp;lt;&amp;lt; &lt;span class=&quot;number&quot;&gt;16&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&quot;二进制中1的个数&quot;&gt;&lt;a href=&quot;#二进制中1的个数&quot; class=&quot;headerlink&quot; title=&quot;二进制中1的个数&quot;&gt;&lt;/a&gt;二进制中1的个数&lt;/h2&gt;&lt;p&gt;先2位一组进行&lt;strong&gt;相加&lt;/strong&gt;，再以乘以2为一组进行&lt;strong&gt;相加&lt;/strong&gt;，一直到一组数量等于总位数&lt;/p&gt;
-&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 高位与低位相加&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;a = ((a &amp;amp; &lt;span class=&quot;number&quot;&gt;0xAAAA&lt;/span&gt;) &amp;gt;&amp;gt; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;) + (a &amp;amp; &lt;span class=&quot;number&quot;&gt;0x5555&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;a = ((a &amp;amp; &lt;span class=&quot;number&quot;&gt;0xCCCC&lt;/span&gt;) &amp;gt;&amp;gt; &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;) + (a &amp;amp; &lt;span class=&quot;number&quot;&gt;0x3333&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;a = ((a &amp;amp; &lt;span class=&quot;number&quot;&gt;0xF0F0&lt;/span&gt;) &amp;gt;&amp;gt; &lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;) + (a &amp;amp; &lt;span class=&quot;number&quot;&gt;0x0F0F&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;a = ((a &amp;amp; &lt;span class=&quot;number&quot;&gt;0xFF00&lt;/span&gt;) &amp;gt;&amp;gt; &lt;span class=&quot;number&quot;&gt;8&lt;/span&gt;) + (a &amp;amp; &lt;span class=&quot;number&quot;&gt;0x00FF&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&quot;取不小于m的最小的2的n次方的数&quot;&gt;&lt;a href=&quot;#取不小于m的最小的2的n次方的数&quot; class=&quot;headerlink&quot; title=&quot;取不小于m的最小的2的n次方的数&quot;&gt;&lt;/a&gt;取不小于m的最小的2的n次方的数&lt;/h2&gt;&lt;p&gt;即：(1 &amp;lt;&amp;lt; n) &amp;gt;= m&lt;/p&gt;
-&lt;p&gt;算法基本原理是将这个数的最高位1以下的每一位都置为1，然后+1得到2的n次方的数即可，因此：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;右移1位后取或至少有2个1（最高位的1 + 1）&lt;/li&gt;
-&lt;li&gt;类推第二次右移2位后取或至少有4个1（2 + 2）&lt;/li&gt;
-&lt;li&gt;类推…&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;如果这个数恰好是你所需要的2的n次方的数，就不大好，所以在实际计算的时候会先减去1&lt;/p&gt;
-&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// java HashMap&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;tableSizeFor&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; cap)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; n = cap - &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    n |= n &amp;gt;&amp;gt;&amp;gt; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    n |= n &amp;gt;&amp;gt;&amp;gt; &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    n |= n &amp;gt;&amp;gt;&amp;gt; &lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    n |= n &amp;gt;&amp;gt;&amp;gt; &lt;span class=&quot;number&quot;&gt;8&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    n |= n &amp;gt;&amp;gt;&amp;gt; &lt;span class=&quot;number&quot;&gt;16&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; (n &amp;lt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;) ? &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; : (n &amp;gt;= MAXIMUM_CAPACITY) ? MAXIMUM_CAPACITY : n + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-</content>
+    <content type="html"><![CDATA[<p>在我们查看其它程序源码（比如jdk）的过程中，经常会看到一些位运算的使用，而且有一些场景下我们使用简单常用的位运算既不会太影响可读性又能增加性能，这里列出了一些常见的位运算的使用</p>
+<h2 id="奇偶"><a href="#奇偶" class="headerlink" title="奇偶"></a>奇偶</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 偶数</span></span><br><span class="line">n &amp; <span class="number">1</span> == <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="交换数"><a href="#交换数" class="headerlink" title="交换数"></a>交换数</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a ^= b;  </span><br><span class="line">b ^= a; <span class="comment">// b = b^(a^b) = a</span></span><br><span class="line">a ^= b; <span class="comment">// a = (a^b)^a = b</span></span><br></pre></td></tr></table></figure>
+<h2 id="变换符号"><a href="#变换符号" class="headerlink" title="变换符号"></a>变换符号</h2><p>变换符号就是正数变成负数，负数变成正数</p>
+<p>由于负数使用补码，所以变换符号只需要：~a + 1</p>
+<h2 id="求绝对值"><a href="#求绝对值" class="headerlink" title="求绝对值"></a>求绝对值</h2><ol>
+<li>获取正负数（0：正数， -1：负数）</li>
+<li>变换符号</li>
+</ol>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// long需要移动63</span></span><br><span class="line"><span class="keyword">int</span> i = a &gt;&gt; <span class="number">31</span>;  </span><br><span class="line">return i == <span class="number">0</span> ? a : (~a + <span class="number">1</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="判断一个数是不是2的幂"><a href="#判断一个数是不是2的幂" class="headerlink" title="判断一个数是不是2的幂"></a>判断一个数是不是2的幂</h2><p>a &amp; (a - 1) == 0</p>
+<h2 id="2的N次方取模"><a href="#2的N次方取模" class="headerlink" title="2的N次方取模"></a>2的N次方取模</h2><p>因为2的N次-1所有的二进制低位都是1</p>
+<p>m &amp; ((1 &lt;&lt; N) - 1) &lt;==&gt; m % 2^N</p>
+<h2 id="高低位交换"><a href="#高低位交换" class="headerlink" title="高低位交换"></a>高低位交换</h2><p>右移得到高位，左移得到高位，移动值为总位数的一半</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 16位数的高低位交换</span></span><br><span class="line">a = (a &gt;&gt; <span class="number">8</span>) | (a &lt;&lt; <span class="number">8</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="N位二进制的范围和取高低位"><a href="#N位二进制的范围和取高低位" class="headerlink" title="N位二进制的范围和取高低位"></a>N位二进制的范围和取高低位</h2><p>N位二进制的范围：0 到 (1 &lt;&lt; N) - 1</p>
+<ol>
+<li>取高16位: a &gt;&gt; 16</li>
+<li>取低16位: a &amp; 0x0000FFFF 或者 a &amp; ((1 &lt;&lt; 16) - 1)</li>
+</ol>
+<h2 id="二进制逆序"><a href="#二进制逆序" class="headerlink" title="二进制逆序"></a>二进制逆序</h2><p>先2位一组进行交换，再以乘以2为一组进行交换，一直到一组数量等于总位数</p>
+<ul>
+<li>(取高位)取16位的 a 的奇数位并将偶数位用0填充用代码实现就是：a &amp; 0xAAAA</li>
+<li>(取低位)取16位的 a 的偶数位并将奇数位用0填充用代码实现就是：a &amp; 0x5555</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// A = 1010, 5 = 0101</span></span><br><span class="line">a = ((a &amp; <span class="number">0xAAAA</span>) &gt;&gt; <span class="number">1</span>) | ((a &amp; <span class="number">0x5555</span>) &lt;&lt; <span class="number">1</span>);</span><br><span class="line"><span class="comment">// C = 1100, 3 = 0011</span></span><br><span class="line">a = ((a &amp; <span class="number">0xCCCC</span>) &gt;&gt; <span class="number">2</span>) | ((a &amp; <span class="number">0x3333</span>) &lt;&lt; <span class="number">2</span>);</span><br><span class="line"><span class="comment">// F0 = 11110000, 0F = 00001111</span></span><br><span class="line">a = ((a &amp; <span class="number">0xF0F0</span>) &gt;&gt; <span class="number">4</span>) | ((a &amp; <span class="number">0x0F0F</span>) &lt;&lt; <span class="number">4</span>);</span><br><span class="line"><span class="comment">// FF00 = 1111111100000000, 00FF = 0000000011111111</span></span><br><span class="line">a = ((a &amp; <span class="number">0xFF00</span>) &gt;&gt; <span class="number">8</span>) | ((a &amp; <span class="number">0x00FF</span>) &lt;&lt; <span class="number">8</span>);</span><br><span class="line"><span class="comment">// FFFF0000, 0000FFFF</span></span><br><span class="line">a = ((a &amp; <span class="number">0xFFFF0000</span>) &gt;&gt; <span class="number">16</span>) | ((a &amp; <span class="number">0x0000FFFF</span>) &lt;&lt; <span class="number">16</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="二进制中1的个数"><a href="#二进制中1的个数" class="headerlink" title="二进制中1的个数"></a>二进制中1的个数</h2><p>先2位一组进行<strong>相加</strong>，再以乘以2为一组进行<strong>相加</strong>，一直到一组数量等于总位数</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 高位与低位相加</span></span><br><span class="line">a = ((a &amp; <span class="number">0xAAAA</span>) &gt;&gt; <span class="number">1</span>) + (a &amp; <span class="number">0x5555</span>);</span><br><span class="line">a = ((a &amp; <span class="number">0xCCCC</span>) &gt;&gt; <span class="number">2</span>) + (a &amp; <span class="number">0x3333</span>);</span><br><span class="line">a = ((a &amp; <span class="number">0xF0F0</span>) &gt;&gt; <span class="number">4</span>) + (a &amp; <span class="number">0x0F0F</span>);</span><br><span class="line">a = ((a &amp; <span class="number">0xFF00</span>) &gt;&gt; <span class="number">8</span>) + (a &amp; <span class="number">0x00FF</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="取不小于m的最小的2的n次方的数"><a href="#取不小于m的最小的2的n次方的数" class="headerlink" title="取不小于m的最小的2的n次方的数"></a>取不小于m的最小的2的n次方的数</h2><p>即：(1 &lt;&lt; n) &gt;= m</p>
+<p>算法基本原理是将这个数的最高位1以下的每一位都置为1，然后+1得到2的n次方的数即可，因此：</p>
+<ul>
+<li>右移1位后取或至少有2个1（最高位的1 + 1）</li>
+<li>类推第二次右移2位后取或至少有4个1（2 + 2）</li>
+<li>类推…</li>
+</ul>
+<p>如果这个数恰好是你所需要的2的n次方的数，就不大好，所以在实际计算的时候会先减去1</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// java HashMap</span></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> <span class="title">tableSizeFor</span><span class="params">(<span class="keyword">int</span> cap)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n = cap - <span class="number">1</span>;</span><br><span class="line">    n |= n &gt;&gt;&gt; <span class="number">1</span>;</span><br><span class="line">    n |= n &gt;&gt;&gt; <span class="number">2</span>;</span><br><span class="line">    n |= n &gt;&gt;&gt; <span class="number">4</span>;</span><br><span class="line">    n |= n &gt;&gt;&gt; <span class="number">8</span>;</span><br><span class="line">    n |= n &gt;&gt;&gt; <span class="number">16</span>;</span><br><span class="line">    <span class="keyword">return</span> (n &lt; <span class="number">0</span>) ? <span class="number">1</span> : (n &gt;= MAXIMUM_CAPACITY) ? MAXIMUM_CAPACITY : n + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
     
     <summary type="html">
     
@@ -171,9 +171,9 @@
       <category term="basic" scheme="http://lxie.xyz/categories/basic/"/>
     
     
-      <category term="bit" scheme="http://lxie.xyz/tags/bit/"/>
-    
       <category term="java" scheme="http://lxie.xyz/tags/java/"/>
+    
+      <category term="bit" scheme="http://lxie.xyz/tags/bit/"/>
     
   </entry>
   
@@ -184,48 +184,48 @@
     <published>2016-05-20T06:29:20.000Z</published>
     <updated>2016-05-20T06:34:53.000Z</updated>
     
-    <content type="html">&lt;p&gt;要搞清楚Java字符（串）编码，先得区分清楚内码（internal encoding）和外码（external encoding）&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;内码是程序内部使用的字符编码，特别是某种语言实现其char或String类型在内存里用的内部编码&lt;/li&gt;
-&lt;li&gt;外码是程序与外部交互时外部使用的字符编码&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Java使用UTF-16作为字符的内码&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;然而UTF-16在Java设计之初还是定长编码，后来Unicode涵盖的字符变多了之后，UTF-16变成了两字节或者四字节的&lt;strong&gt;变长编码&lt;/strong&gt;&lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;p&gt;Java也只好跟进，为了实现UTF-16的变长编码语义，Java规定：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;一个完整的字符是一个code point&lt;/li&gt;
-&lt;li&gt;一个code point可以对应 1 到 2 个code unit&lt;/li&gt;
-&lt;li&gt;一个code unit是固定的两字节&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;备注：本文中提到的关于：UTF-16编码，Unicode，BOM等信息，不是很清楚的同学可以查看我的另一篇文章 &lt;a href=&quot;http://lxie.xyz/2016/05/20/charset-and-encoding/&quot;&gt;字符集和字符编码&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id=&quot;char&quot;&gt;&lt;a href=&quot;#char&quot; class=&quot;headerlink&quot; title=&quot;char&quot;&gt;&lt;/a&gt;char&lt;/h2&gt;&lt;p&gt;对应上述的一个code unit，固定为两个字节，&lt;strong&gt;也可以理解成是一个两字节的无符号整型&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;只有只需1个code unit的code point才可以完整的存在char里，所以char类型不一定能表示一个UTF-16的字符&lt;/p&gt;
-&lt;h3 id=&quot;unicode&quot;&gt;&lt;a href=&quot;#unicode&quot; class=&quot;headerlink&quot; title=&quot;unicode&quot;&gt;&lt;/a&gt;unicode&lt;/h3&gt;&lt;p&gt;char是固定的两个字节，所以在java中使用unicode编码只能这样：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;一个char ‘\uXXXX’&lt;/li&gt;
-&lt;li&gt;两个char(String) “\uXXXX\uXXXX”&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;char&lt;/span&gt; u = &lt;span class=&quot;string&quot;&gt;&#39;\u4E2D&#39;&lt;/span&gt;; &lt;span class=&quot;comment&quot;&gt;// 中&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;String u2 = &lt;span class=&quot;string&quot;&gt;&quot;\uD801\uDC0F&quot;&lt;/span&gt;; &lt;span class=&quot;comment&quot;&gt;// ? 一个特殊字符, length 2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&quot;String&quot;&gt;&lt;a href=&quot;#String&quot; class=&quot;headerlink&quot; title=&quot;String&quot;&gt;&lt;/a&gt;String&lt;/h2&gt;&lt;p&gt;String作为char的序列，对于两字节的UTF-16只需要用一个char表示，对于需要2个code unit（四字节）的UTF-16可以包含由两个char组成的 “surrogate pair” 来表示&lt;/p&gt;
-&lt;p&gt;为此Java的标准库新加了一套用于访问code point的API，而这套API就表现出了UTF-16的变长特性, 包括String, StringBuffer, StringBuilder等&lt;/p&gt;
-&lt;h3 id=&quot;getBytes&quot;&gt;&lt;a href=&quot;#getBytes&quot; class=&quot;headerlink&quot; title=&quot;getBytes&quot;&gt;&lt;/a&gt;getBytes&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;上面说了这么多内码，下面说说我们程序与外部交互时更加常用用的外码&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;String.getBytes()是一个用于将String的内码转换为指定的外码的方法：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;无参数版使用平台的默认编码作为外码&lt;/li&gt;
-&lt;li&gt;有参数版使用参数指定的编码作为外码&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;将String的内容用外码编码后，结果放在一个新byte[]返回&lt;/p&gt;
-&lt;h3 id=&quot;CompressedString&quot;&gt;&lt;a href=&quot;#CompressedString&quot; class=&quot;headerlink&quot; title=&quot;CompressedString&quot;&gt;&lt;/a&gt;CompressedString&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;由于Java使用UTF-16作为内码，只有2和4字节两种情况降低了复杂的，然而很多时候我们用到的字符使用一个字节的ASCII就可以表示，使用两个字节无疑增加了开销&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;所以在Sun JDK6中有一个压缩字符串（-XX:+UseCompressedString）的功能。启用后，String内部存储字符串内容可能用char[]，也可能用byte[]；&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;当整个字符串所有字符都在ASCII编码范围内时，就使用byte[]（ASCII序列）来存储，此时字符串就处于压缩状态&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;然而压缩字符串这个功能的实现并不够理想，实现的太复杂而且效果未如预期的好，所以后续JDK版本中并没有包含，后续版本可能改进后继续加入该功能&lt;/p&gt;
-&lt;h2 id=&quot;实例&quot;&gt;&lt;a href=&quot;#实例&quot; class=&quot;headerlink&quot; title=&quot;实例&quot;&gt;&lt;/a&gt;实例&lt;/h2&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;String str = &lt;span class=&quot;string&quot;&gt;&quot;z中&quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;System.out.println(str.length());&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;String str1 = &lt;span class=&quot;string&quot;&gt;&quot;z中\uD852\uDF62&quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// **输出三个字符**, 后面两个char组成一个Unicode字符&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;System.out.println(str1);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 4&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;System.out.println(str1.length());&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 1: 默认UTF-8, ASCII 使用一个字节&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;System.out.println(&lt;span class=&quot;string&quot;&gt;&quot;z&quot;&lt;/span&gt;.getBytes().length);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 3: 默认UTF-8, 中文使用三个字节&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;System.out.println(&lt;span class=&quot;string&quot;&gt;&quot;中&quot;&lt;/span&gt;.getBytes().length);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 下面两个都是返回4&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 虽然两个字符都是在UTF-16的两个字节表示范围内, 但是UTF-16默认会加上两个BOM信息&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;System.out.println(&lt;span class=&quot;string&quot;&gt;&quot;z&quot;&lt;/span&gt;.getBytes(&lt;span class=&quot;string&quot;&gt;&quot;UTF-16&quot;&lt;/span&gt;).length);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;System.out.println(&lt;span class=&quot;string&quot;&gt;&quot;中&quot;&lt;/span&gt;.getBytes(&lt;span class=&quot;string&quot;&gt;&quot;UTF-16&quot;&lt;/span&gt;).length);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// FEFF4E2D (FEFF为大端序BOM)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;System.out.println(getHexString(&lt;span class=&quot;string&quot;&gt;&quot;中&quot;&lt;/span&gt;.getBytes(&lt;span class=&quot;string&quot;&gt;&quot;UTF-16&quot;&lt;/span&gt;)));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 下面两个都是返回2, 指定BOM顺序后,不输出BOM信息,&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;System.out.println(&lt;span class=&quot;string&quot;&gt;&quot;z&quot;&lt;/span&gt;.getBytes(&lt;span class=&quot;string&quot;&gt;&quot;UTF-16BE&quot;&lt;/span&gt;).length);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;System.out.println(&lt;span class=&quot;string&quot;&gt;&quot;中&quot;&lt;/span&gt;.getBytes(&lt;span class=&quot;string&quot;&gt;&quot;UTF-16BE&quot;&lt;/span&gt;).length);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 4E2D&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;System.out.println(getHexString(&lt;span class=&quot;string&quot;&gt;&quot;中&quot;&lt;/span&gt;.getBytes(&lt;span class=&quot;string&quot;&gt;&quot;UTF-16BE&quot;&lt;/span&gt;)));&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-</content>
+    <content type="html"><![CDATA[<p>要搞清楚Java字符（串）编码，先得区分清楚内码（internal encoding）和外码（external encoding）</p>
+<ul>
+<li>内码是程序内部使用的字符编码，特别是某种语言实现其char或String类型在内存里用的内部编码</li>
+<li>外码是程序与外部交互时外部使用的字符编码</li>
+</ul>
+<p><strong>Java使用UTF-16作为字符的内码</strong></p>
+<p>然而UTF-16在Java设计之初还是定长编码，后来Unicode涵盖的字符变多了之后，UTF-16变成了两字节或者四字节的<strong>变长编码</strong></p>
+<a id="more"></a>
+<p>Java也只好跟进，为了实现UTF-16的变长编码语义，Java规定：</p>
+<ul>
+<li>一个完整的字符是一个code point</li>
+<li>一个code point可以对应 1 到 2 个code unit</li>
+<li>一个code unit是固定的两字节</li>
+</ul>
+<p><em>备注：本文中提到的关于：UTF-16编码，Unicode，BOM等信息，不是很清楚的同学可以查看我的另一篇文章 <a href="http://lxie.xyz/2016/05/20/charset-and-encoding/">字符集和字符编码</a></em></p>
+<h2 id="char"><a href="#char" class="headerlink" title="char"></a>char</h2><p>对应上述的一个code unit，固定为两个字节，<strong>也可以理解成是一个两字节的无符号整型</strong></p>
+<p>只有只需1个code unit的code point才可以完整的存在char里，所以char类型不一定能表示一个UTF-16的字符</p>
+<h3 id="unicode"><a href="#unicode" class="headerlink" title="unicode"></a>unicode</h3><p>char是固定的两个字节，所以在java中使用unicode编码只能这样：</p>
+<ul>
+<li>一个char ‘\uXXXX’</li>
+<li>两个char(String) “\uXXXX\uXXXX”</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> u = <span class="string">'\u4E2D'</span>; <span class="comment">// 中</span></span><br><span class="line">String u2 = <span class="string">"\uD801\uDC0F"</span>; <span class="comment">// ? 一个特殊字符, length 2</span></span><br></pre></td></tr></table></figure>
+<h2 id="String"><a href="#String" class="headerlink" title="String"></a>String</h2><p>String作为char的序列，对于两字节的UTF-16只需要用一个char表示，对于需要2个code unit（四字节）的UTF-16可以包含由两个char组成的 “surrogate pair” 来表示</p>
+<p>为此Java的标准库新加了一套用于访问code point的API，而这套API就表现出了UTF-16的变长特性, 包括String, StringBuffer, StringBuilder等</p>
+<h3 id="getBytes"><a href="#getBytes" class="headerlink" title="getBytes"></a>getBytes</h3><blockquote>
+<p>上面说了这么多内码，下面说说我们程序与外部交互时更加常用用的外码</p>
+</blockquote>
+<p>String.getBytes()是一个用于将String的内码转换为指定的外码的方法：</p>
+<ul>
+<li>无参数版使用平台的默认编码作为外码</li>
+<li>有参数版使用参数指定的编码作为外码</li>
+</ul>
+<p>将String的内容用外码编码后，结果放在一个新byte[]返回</p>
+<h3 id="CompressedString"><a href="#CompressedString" class="headerlink" title="CompressedString"></a>CompressedString</h3><blockquote>
+<p>由于Java使用UTF-16作为内码，只有2和4字节两种情况降低了复杂的，然而很多时候我们用到的字符使用一个字节的ASCII就可以表示，使用两个字节无疑增加了开销</p>
+</blockquote>
+<p>所以在Sun JDK6中有一个压缩字符串（-XX:+UseCompressedString）的功能。启用后，String内部存储字符串内容可能用char[]，也可能用byte[]；</p>
+<p><strong>当整个字符串所有字符都在ASCII编码范围内时，就使用byte[]（ASCII序列）来存储，此时字符串就处于压缩状态</strong></p>
+<p>然而压缩字符串这个功能的实现并不够理想，实现的太复杂而且效果未如预期的好，所以后续JDK版本中并没有包含，后续版本可能改进后继续加入该功能</p>
+<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">String str = <span class="string">"z中"</span>;</span><br><span class="line"><span class="comment">// 2</span></span><br><span class="line">System.out.println(str.length());</span><br><span class="line"></span><br><span class="line">String str1 = <span class="string">"z中\uD852\uDF62"</span>;</span><br><span class="line"><span class="comment">// **输出三个字符**, 后面两个char组成一个Unicode字符</span></span><br><span class="line">System.out.println(str1);</span><br><span class="line"><span class="comment">// 4</span></span><br><span class="line">System.out.println(str1.length());</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 1: 默认UTF-8, ASCII 使用一个字节</span></span><br><span class="line">System.out.println(<span class="string">"z"</span>.getBytes().length);</span><br><span class="line"><span class="comment">// 3: 默认UTF-8, 中文使用三个字节</span></span><br><span class="line">System.out.println(<span class="string">"中"</span>.getBytes().length);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 下面两个都是返回4</span></span><br><span class="line"><span class="comment">// 虽然两个字符都是在UTF-16的两个字节表示范围内, 但是UTF-16默认会加上两个BOM信息</span></span><br><span class="line">System.out.println(<span class="string">"z"</span>.getBytes(<span class="string">"UTF-16"</span>).length);</span><br><span class="line">System.out.println(<span class="string">"中"</span>.getBytes(<span class="string">"UTF-16"</span>).length);</span><br><span class="line"><span class="comment">// FEFF4E2D (FEFF为大端序BOM)</span></span><br><span class="line">System.out.println(getHexString(<span class="string">"中"</span>.getBytes(<span class="string">"UTF-16"</span>)));</span><br><span class="line"></span><br><span class="line"><span class="comment">// 下面两个都是返回2, 指定BOM顺序后,不输出BOM信息,</span></span><br><span class="line">System.out.println(<span class="string">"z"</span>.getBytes(<span class="string">"UTF-16BE"</span>).length);</span><br><span class="line">System.out.println(<span class="string">"中"</span>.getBytes(<span class="string">"UTF-16BE"</span>).length);</span><br><span class="line"><span class="comment">// 4E2D</span></span><br><span class="line">System.out.println(getHexString(<span class="string">"中"</span>.getBytes(<span class="string">"UTF-16BE"</span>)));</span><br></pre></td></tr></table></figure>
+]]></content>
     
     <summary type="html">
     
@@ -242,9 +242,9 @@
       <category term="java" scheme="http://lxie.xyz/categories/java/"/>
     
     
-      <category term="encoding" scheme="http://lxie.xyz/tags/encoding/"/>
-    
       <category term="java" scheme="http://lxie.xyz/tags/java/"/>
+    
+      <category term="encoding" scheme="http://lxie.xyz/tags/encoding/"/>
     
       <category term="string" scheme="http://lxie.xyz/tags/string/"/>
     
@@ -257,240 +257,240 @@
     <published>2016-05-19T16:22:38.000Z</published>
     <updated>2016-05-20T06:33:26.000Z</updated>
     
-    <content type="html">&lt;p&gt;众所周知计算机中储存的信息都是用二进制数表示的，而我们在屏幕上看到的英文、汉字等字符都是二进制数转换之后的结果，这个过程中就需要对信息（字符）进行编码和解码工作&lt;/p&gt;
-&lt;p&gt;然而全世界很多个国家都在为自己的字符编码，并且互不想通，不同的语言字符编码值相同却可能代表不同的符号&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;字符(Character)是各种文字和符号的总称，包括各国家文字、标点符号、图形符号、数字等&lt;/li&gt;
-&lt;li&gt;字符集(Character set)是多个字符的集合&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;能不能定义一个超大的字符集，它可以容纳全世界所有的文字字符，再对它们统一进行编码，让每一个字符都对应一个不同的编码值&lt;/strong&gt;&lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h2 id=&quot;Unicode-amp-ISO-10646&quot;&gt;&lt;a href=&quot;#Unicode-amp-ISO-10646&quot; class=&quot;headerlink&quot; title=&quot;Unicode &amp;amp; ISO 10646&quot;&gt;&lt;/a&gt;Unicode &amp;amp; ISO 10646&lt;/h2&gt;&lt;p&gt;有两个机构试图来做统一编码的事情，分别是：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;国际标准化组织（ISO）&lt;br&gt; 于1984年创建ISO/IEC JTC1/SC2/WG2工作组，试图制定一份“通用字符集”（Universal Character Set，简称&lt;strong&gt;UCS&lt;/strong&gt;），并最终制定了ISO 10646标准&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;统一码联盟&lt;br&gt; 由一众软件制造商于1988年组成，并且开发了&lt;strong&gt;Unicode&lt;/strong&gt;标准（The Unicode Standard）&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;1991年前后，两个项目的参与者都认识到，世界不需要两个不兼容的字符集。于是，它们开始合并双方的工作成果，并为创立一个单一编码表而协同工作&lt;/p&gt;
-&lt;p&gt;从Unicode 2.0开始，Unicode采用了与ISO 10646-1相同的字库和字码；ISO也承诺，ISO 10646将不会替超出U+10FFFF范围的UCS-4编码赋值，以使得两者保持一致。两个项目仍都独立存在，并独立地公布各自的标准。不过由于Unicode这一名字比较好记，因而它使用更为广泛&lt;/p&gt;
-&lt;p&gt;两者版本的对应关系可以通过如下地址查看: &lt;a href=&quot;https://zh.wikipedia.org/wiki/Unicode&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://zh.wikipedia.org/wiki/Unicode&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;Unicode&quot;&gt;&lt;a href=&quot;#Unicode&quot; class=&quot;headerlink&quot; title=&quot;Unicode&quot;&gt;&lt;/a&gt;Unicode&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;Unicode（中文：万国码、国际码、统一码、单一码）是计算机科学领域里的一项业界标准。它对世界上大部分的文字系统进行了整理、编码，使得电脑可以用更为简单的方式来呈现和处理文字&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Unicode编码点分为17个平面（plane），每个平面包含2^16 （即65536）个码位（code point）。17个平面的码位可表示为从U+000000到U+10FFFF，可以编码百万个字符&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;也就是说Unicode只用了 16 + 5 = 21 个bit&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;目前最新的版本为2015年6月17日公布的 Unicode 8.0.0，已收入超过十万个字符&lt;/p&gt;
-&lt;h2 id=&quot;UCS-4&quot;&gt;&lt;a href=&quot;#UCS-4&quot; class=&quot;headerlink&quot; title=&quot;UCS-4&quot;&gt;&lt;/a&gt;UCS-4&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;在Unicode与ISO 10646合并之前，ISO 10646标准为“通用字符集”（UCS）定义了一种31位的编码形式（即UCS-4），其编码固定占用4个字节，编码空间为0x00000000~0x7FFFFFFF（可以编码20多亿个字符）&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;UCS-4有20多亿个编码空间，但实际使用范围并不超过0x10FFFF，并且为了兼容Unicode标准，ISO也承诺将不会为超出0x10FFFF的UCS-4编码赋值&lt;/p&gt;
-&lt;h2 id=&quot;character-encoding&quot;&gt;&lt;a href=&quot;#character-encoding&quot; class=&quot;headerlink&quot; title=&quot;character encoding&quot;&gt;&lt;/a&gt;character encoding&lt;/h2&gt;&lt;p&gt;Unicode(UCS)字符集让每一个字符有了唯一的编码，然后实际的使用中我们往往需要针对 Unicode 字符集的具体字符编码，比如：UTF-16, UTF-8, GBK等&lt;/p&gt;
-&lt;h3 id=&quot;ASCII&quot;&gt;&lt;a href=&quot;#ASCII&quot; class=&quot;headerlink&quot; title=&quot;ASCII&quot;&gt;&lt;/a&gt;ASCII&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;American Standard Code for Information Interchange，美国信息交换标准代码&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;ASCII使用单字节的后 7 bit 表示128个字符，字符集主要包括控制字符（回车键、退格、换行键等），可显示字符（英文大小写字符、阿拉伯数字和西文符号）&lt;/p&gt;
-&lt;p&gt;它主要用于显示现代英语，是现今最通用的单字节编码系统，并等同于国际标准ISO/IEC 646&lt;/p&gt;
-&lt;h3 id=&quot;ISO-8859-1&quot;&gt;&lt;a href=&quot;#ISO-8859-1&quot; class=&quot;headerlink&quot; title=&quot;ISO 8859-1&quot;&gt;&lt;/a&gt;ISO 8859-1&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;正式编号为ISO/IEC 8859-1:1998，又称Latin-1或西欧语言&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;是国际标准化组织内ISO/IEC 8859的第一个8位字符集。它以ASCII为基础，&lt;strong&gt;在空置的0xA0-0xFF的范围内，加入96个字母及符号&lt;/strong&gt;，藉以供使用附加符号的拉丁字母语言使用&lt;/p&gt;
-&lt;h3 id=&quot;UTF-32-amp-UCS-4&quot;&gt;&lt;a href=&quot;#UTF-32-amp-UCS-4&quot; class=&quot;headerlink&quot; title=&quot;UTF-32 &amp;amp; UCS-4&quot;&gt;&lt;/a&gt;UTF-32 &amp;amp; UCS-4&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;UTF: UCS Transformation Format&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;UTF-32它的编码值与UCS-4相同，只不过为了兼容Unicode标准,其编码空间被限定在了0~0x10FFFF之间。因此也可以说：UTF-32是UCS-4的一个子集&lt;/p&gt;
-&lt;h3 id=&quot;UTF-16-amp-UCS-2&quot;&gt;&lt;a href=&quot;#UTF-16-amp-UCS-2&quot; class=&quot;headerlink&quot; title=&quot;UTF-16 &amp;amp; UCS-2&quot;&gt;&lt;/a&gt;UTF-16 &amp;amp; UCS-2&lt;/h3&gt;&lt;p&gt;除了UCS-4，ISO 10646标准为 UCS 定义了一种16位的编码形式（即UCS-2），其编码固定占用2个字节，它包含65536个编码空间（可以为全世界最常用的63K字符编码，为了兼容Unicode，0xD800-0xDFFF之间的码位未使用）&lt;/p&gt;
-&lt;p&gt;但两个字节并不足以真正的“一统江湖”，于是UTF-16诞生了，与UCS-2一样，它使用两个字节为全世界最常用的63K字符编码，不同的是，它使用4个字节对不常用的字符进行编码。&lt;strong&gt;UTF-16属于变长编码&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;具体和Unicode之间的转换关系，有兴趣详见：&lt;a href=&quot;https://zh.wikipedia.org/wiki/UTF-16&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://zh.wikipedia.org/wiki/UTF-16&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;UTF-8&quot;&gt;&lt;a href=&quot;#UTF-8&quot; class=&quot;headerlink&quot; title=&quot;UTF-8&quot;&gt;&lt;/a&gt;UTF-8&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;无论是UTF-16/32还是UCS-2/4，一个字符都需要多个字节来编码，这对那些英语国家来说多浪费啊，因此UTF-8产生了&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;在UTF-8编码中，ASCII码中的字符还是ASCII码的值，只需要一个字节表示，其余的字符需要2字节、3字节或4字节来表示&lt;/p&gt;
-&lt;p&gt;UTF-8的编码规则：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;对于ASCII码中的符号，使用单字节编码，其编码值与ASCII值相同。其中ASCII值的范围为0~0x7F，所有编码的二进制值中第一位为0（用来区分单字节编码和多字节编码）&lt;/li&gt;
-&lt;li&gt;其它字符用多个字节来编码（假设用N个字节），多字节编码需满足&lt;ol&gt;
-&lt;li&gt;第一个字节的前N位都为1，第N+1位为0&lt;/li&gt;
-&lt;li&gt;后面N-1个字节的前两位都为10&lt;/li&gt;
-&lt;li&gt;N个字节中其余位全部用来存储Unicode中的码位值&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;字节数&lt;/th&gt;
-&lt;th&gt;Unicode&lt;/th&gt;
-&lt;th&gt;UTF-8编码&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;  1&lt;/td&gt;
-&lt;td&gt;000000-00007F&lt;/td&gt;
-&lt;td&gt;0xxxxxxx&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;  2&lt;/td&gt;
-&lt;td&gt;000080-0007FF&lt;/td&gt;
-&lt;td&gt;110xxxxx 10xxxxxx&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;  3&lt;/td&gt;
-&lt;td&gt;000800-00FFFF&lt;/td&gt;
-&lt;td&gt;1110xxxx 10xxxxxx 10xxxxxx&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;  4&lt;/td&gt;
-&lt;td&gt;010000-10FFFF&lt;/td&gt;
-&lt;td&gt;11110xxx 10xxxxxx 10xxxxxx 10xxxxxx&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h3 id=&quot;GBxxx&quot;&gt;&lt;a href=&quot;#GBxxx&quot; class=&quot;headerlink&quot; title=&quot;GBxxx&quot;&gt;&lt;/a&gt;GBxxx&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;GB: 汉字字符集标准编码&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;GB相关编码编码规则，本质上类似UTF-8等编码，再次不在概述，有兴趣可以查阅：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://zh.wikipedia.org/wiki/GB_2312&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://zh.wikipedia.org/wiki/GB_2312&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://zh.wikipedia.org/wiki/%E6%B1%89%E5%AD%97%E5%86%85%E7%A0%81%E6%89%A9%E5%B1%95%E8%A7%84%E8%8C%83&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://zh.wikipedia.org/wiki/汉字内码扩展规范&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://zh.wikipedia.org/wiki/GB_18030&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://zh.wikipedia.org/wiki/GB_18030&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&quot;GB2312&quot;&gt;&lt;a href=&quot;#GB2312&quot; class=&quot;headerlink&quot; title=&quot;GB2312&quot;&gt;&lt;/a&gt;GB2312&lt;/h4&gt;&lt;blockquote&gt;
-&lt;p&gt;GB2312 或 GB2312–80 是中华人民共和国国家标准简体中文字符集，全称《信息交换用汉字编码字符集·基本集》&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;GB2312使用一字节或者两字节的变长编码，使用两个字节表示汉字，共收录6763个汉字，其中一级汉字3755个，二级汉字3008个；同时收录了包括拉丁字母、希腊字母、日文平假名及片假名字母、俄语西里尔字母在内的682个字符&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;但对于人名、古汉语等方面出现的罕用字和繁体字，GB2312不能处理&lt;/strong&gt;&lt;/p&gt;
-&lt;h4 id=&quot;GBK&quot;&gt;&lt;a href=&quot;#GBK&quot; class=&quot;headerlink&quot; title=&quot;GBK&quot;&gt;&lt;/a&gt;GBK&lt;/h4&gt;&lt;blockquote&gt;
-&lt;p&gt;GBK全名为《汉字内码扩展规范(GBK)》&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;微软利用GB2312-80未使用的编码空间，收录GB13000.1-93全部字符制定了GBK编码，GBK向下完全兼容GB2312-80编码，最早实现于Windows 95简体中文版&lt;/p&gt;
-&lt;p&gt;1995年的汉字扩展规范GBK1.0收录了21886个符号，包括21003个汉字和883个其它符号&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;GBK 只为“技术规范指导性文件”，不属于国家标准&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;国家质量技术监督局于2000年3月17日推出了GB 18030-2000标准，以取代GBK&lt;/p&gt;
-&lt;h4 id=&quot;GB18030&quot;&gt;&lt;a href=&quot;#GB18030&quot; class=&quot;headerlink&quot; title=&quot;GB18030&quot;&gt;&lt;/a&gt;GB18030&lt;/h4&gt;&lt;blockquote&gt;
-&lt;p&gt;GB18030，全称：国家标准GB18030-2005《信息技术中文编码字符集》，是中华人民共和国现时最新的内码字集，共收录汉字70,244个&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;GB 18030主要有以下特点:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;与 UTF-8 相同，采用多字节编码，每个字可以由1个、2个或4个字节组成&lt;/li&gt;
-&lt;li&gt;支持GB13000及Unicode的全部统一汉字，编码空间庞大，最多可定义161万个字元&lt;/li&gt;
-&lt;li&gt;与GB2312-1980完全兼容，与GBK基本兼容&lt;/li&gt;
-&lt;li&gt;支持中国国内少数民族的文字，不需要动用造字区&lt;/li&gt;
-&lt;li&gt;汉字收录范围包含繁体汉字以及日韩汉字&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;字符编码对比&quot;&gt;&lt;a href=&quot;#字符编码对比&quot; class=&quot;headerlink&quot; title=&quot;字符编码对比&quot;&gt;&lt;/a&gt;字符编码对比&lt;/h3&gt;&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;字符编码&lt;/th&gt;
-&lt;th&gt;编码空间&lt;/th&gt;
-&lt;th&gt;最少编码字节数&lt;/th&gt;
-&lt;th&gt;最大编码字节数&lt;/th&gt;
-&lt;th&gt;变长编码&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;  ASCII&lt;/td&gt;
-&lt;td&gt;0-7F&lt;/td&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;td&gt;no&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;IS O8859-1&lt;/td&gt;
-&lt;td&gt;0-FF&lt;/td&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;td&gt;no&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;  UCS-4&lt;/td&gt;
-&lt;td&gt;0-7FFFFFFF&lt;/td&gt;
-&lt;td&gt;4&lt;/td&gt;
-&lt;td&gt;4&lt;/td&gt;
-&lt;td&gt;no&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;  UCS-2&lt;/td&gt;
-&lt;td&gt;0-FFFF&lt;/td&gt;
-&lt;td&gt;2&lt;/td&gt;
-&lt;td&gt;2&lt;/td&gt;
-&lt;td&gt;no&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;  UTF-32&lt;/td&gt;
-&lt;td&gt;0-10FFFF&lt;/td&gt;
-&lt;td&gt;4&lt;/td&gt;
-&lt;td&gt;4&lt;/td&gt;
-&lt;td&gt;no&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;  UTF-16&lt;/td&gt;
-&lt;td&gt;0-10FFFF&lt;/td&gt;
-&lt;td&gt;2&lt;/td&gt;
-&lt;td&gt;4&lt;/td&gt;
-&lt;td&gt;yes&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;  UTF-8&lt;/td&gt;
-&lt;td&gt;0-10FFFF&lt;/td&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;td&gt;4&lt;/td&gt;
-&lt;td&gt;yes&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;  GB2312&lt;/td&gt;
-&lt;td&gt;0-10FFFF&lt;/td&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;td&gt;2&lt;/td&gt;
-&lt;td&gt;yes&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;   GBK&lt;/td&gt;
-&lt;td&gt;0-10FFFF&lt;/td&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;td&gt;2&lt;/td&gt;
-&lt;td&gt;yes&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt; GB18030&lt;/td&gt;
-&lt;td&gt;0-10FFFF&lt;/td&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;td&gt;4&lt;/td&gt;
-&lt;td&gt;yes&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&quot;BOM&quot;&gt;&lt;a href=&quot;#BOM&quot; class=&quot;headerlink&quot; title=&quot;BOM&quot;&gt;&lt;/a&gt;BOM&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;字节顺序标记（Byte Order Mark，BOM），X86平台的PC机默认是小端字节序（FFFE）&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;不同的系统往往默认读取字节的顺序是不一样的，分为：高位在前（大端序）、低位在前（小端序），所以不同的字节顺序会影响到对字符的编码和转换；关于字节序详见：&lt;a href=&quot;https://zh.wikipedia.org/wiki/%E5%AD%97%E8%8A%82%E5%BA%8F&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://zh.wikipedia.org/wiki/字节序&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;BOM通常用在文件或者字节流的开头，使用两个字节来标示字节流是高位在前（0xFEFF）还是低位在前（0xFFFE）&lt;/p&gt;
-&lt;p&gt;如果它出现在字节流的中间，则表达零宽度非换行空格的意义，用户看起来就是一个空格。但是从Unicode3.2开始，只能出现在字节流的开头，只能用于标识字节序，除此以外的用法已被舍弃。取而代之的是，使用0x2060来表达零宽度非换行空格的意义&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;有些编码是不依赖于BOM的，比如UTF-8，所有不用添加BOM信息，添加BOM反而会导致某些情况下的乱码&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&quot;文件编码&quot;&gt;&lt;a href=&quot;#文件编码&quot; class=&quot;headerlink&quot; title=&quot;文件编码&quot;&gt;&lt;/a&gt;文件编码&lt;/h2&gt;&lt;p&gt;一般会采用三种方式来判断文本的编码:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;检测文件头标识&lt;br&gt; 根据文件的头几个字节（BOM和编码信息）内容进行判断&lt;/p&gt;
- &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# 常见的编码头几个字节标识如下&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;EF BB BF       UTF-8 &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;FE FF          UTF-16/UCS-2, little endian &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;FF FE          UTF-16/UCS-2, big endian &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;FF FE 00 00    UTF-32/UCS-4, little endian&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;00 00 FE FF    UTF-32/UCS-4, big-endian&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ol&gt;
-&lt;li&gt;基于文件内容根据一定的规则猜测&lt;/li&gt;
-&lt;li&gt;提示用户选择&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;python的chardet模块实现了前两种方式的自动识别，有兴趣可以查看相关源码：&lt;a href=&quot;https://github.com/chardet/chardet&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/chardet/chardet&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;联通的经典笑话&quot;&gt;&lt;a href=&quot;#联通的经典笑话&quot; class=&quot;headerlink&quot; title=&quot;联通的经典笑话&quot;&gt;&lt;/a&gt;联通的经典笑话&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;一个关于文件编码的经典笑话： 使用记事本新建一个txt文件，输入移动两个字然后保存，再用记事本打开，显示正常；再新建一个txt文件，输入联通两个字然后保存，再用记事本打开，出现乱码。因此有人说联通不如移动强是有原因的……也有人说是联通得罪了微软……&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;当然这是一个笑话，原因可以通过理解记事本判断文本的编码的方式来解释：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;保存包含联通两个字的文件时并没有指定编码，默认以ANSI编码保存(中文字符其实就是用GBK编码)&lt;/li&gt;
-&lt;li&gt;联通的GBK编码是：C1 AA CD A8&lt;/li&gt;
-&lt;li&gt;打开文件时因为保存时没有指定编码，所以记事本会使用上面的方式二进行猜测编码&lt;/li&gt;
-&lt;li&gt;恰巧C1 AA CD A8匹配上了UTF-8的规则，于是记事本使用UTF-8显示联通，所以导致乱码&lt;/li&gt;
-&lt;/ol&gt;
-</content>
+    <content type="html"><![CDATA[<p>众所周知计算机中储存的信息都是用二进制数表示的，而我们在屏幕上看到的英文、汉字等字符都是二进制数转换之后的结果，这个过程中就需要对信息（字符）进行编码和解码工作</p>
+<p>然而全世界很多个国家都在为自己的字符编码，并且互不想通，不同的语言字符编码值相同却可能代表不同的符号</p>
+<ul>
+<li>字符(Character)是各种文字和符号的总称，包括各国家文字、标点符号、图形符号、数字等</li>
+<li>字符集(Character set)是多个字符的集合</li>
+</ul>
+<p><strong>能不能定义一个超大的字符集，它可以容纳全世界所有的文字字符，再对它们统一进行编码，让每一个字符都对应一个不同的编码值</strong></p>
+<a id="more"></a>
+<h2 id="Unicode-amp-ISO-10646"><a href="#Unicode-amp-ISO-10646" class="headerlink" title="Unicode &amp; ISO 10646"></a>Unicode &amp; ISO 10646</h2><p>有两个机构试图来做统一编码的事情，分别是：</p>
+<ol>
+<li><p>国际标准化组织（ISO）<br> 于1984年创建ISO/IEC JTC1/SC2/WG2工作组，试图制定一份“通用字符集”（Universal Character Set，简称<strong>UCS</strong>），并最终制定了ISO 10646标准</p>
+</li>
+<li><p>统一码联盟<br> 由一众软件制造商于1988年组成，并且开发了<strong>Unicode</strong>标准（The Unicode Standard）</p>
+</li>
+</ol>
+<p>1991年前后，两个项目的参与者都认识到，世界不需要两个不兼容的字符集。于是，它们开始合并双方的工作成果，并为创立一个单一编码表而协同工作</p>
+<p>从Unicode 2.0开始，Unicode采用了与ISO 10646-1相同的字库和字码；ISO也承诺，ISO 10646将不会替超出U+10FFFF范围的UCS-4编码赋值，以使得两者保持一致。两个项目仍都独立存在，并独立地公布各自的标准。不过由于Unicode这一名字比较好记，因而它使用更为广泛</p>
+<p>两者版本的对应关系可以通过如下地址查看: <a href="https://zh.wikipedia.org/wiki/Unicode" target="_blank" rel="external">https://zh.wikipedia.org/wiki/Unicode</a></p>
+<h2 id="Unicode"><a href="#Unicode" class="headerlink" title="Unicode"></a>Unicode</h2><blockquote>
+<p>Unicode（中文：万国码、国际码、统一码、单一码）是计算机科学领域里的一项业界标准。它对世界上大部分的文字系统进行了整理、编码，使得电脑可以用更为简单的方式来呈现和处理文字</p>
+</blockquote>
+<p>Unicode编码点分为17个平面（plane），每个平面包含2^16 （即65536）个码位（code point）。17个平面的码位可表示为从U+000000到U+10FFFF，可以编码百万个字符</p>
+<p><strong>也就是说Unicode只用了 16 + 5 = 21 个bit</strong></p>
+<p>目前最新的版本为2015年6月17日公布的 Unicode 8.0.0，已收入超过十万个字符</p>
+<h2 id="UCS-4"><a href="#UCS-4" class="headerlink" title="UCS-4"></a>UCS-4</h2><blockquote>
+<p>在Unicode与ISO 10646合并之前，ISO 10646标准为“通用字符集”（UCS）定义了一种31位的编码形式（即UCS-4），其编码固定占用4个字节，编码空间为0x00000000~0x7FFFFFFF（可以编码20多亿个字符）</p>
+</blockquote>
+<p>UCS-4有20多亿个编码空间，但实际使用范围并不超过0x10FFFF，并且为了兼容Unicode标准，ISO也承诺将不会为超出0x10FFFF的UCS-4编码赋值</p>
+<h2 id="character-encoding"><a href="#character-encoding" class="headerlink" title="character encoding"></a>character encoding</h2><p>Unicode(UCS)字符集让每一个字符有了唯一的编码，然后实际的使用中我们往往需要针对 Unicode 字符集的具体字符编码，比如：UTF-16, UTF-8, GBK等</p>
+<h3 id="ASCII"><a href="#ASCII" class="headerlink" title="ASCII"></a>ASCII</h3><blockquote>
+<p>American Standard Code for Information Interchange，美国信息交换标准代码</p>
+</blockquote>
+<p>ASCII使用单字节的后 7 bit 表示128个字符，字符集主要包括控制字符（回车键、退格、换行键等），可显示字符（英文大小写字符、阿拉伯数字和西文符号）</p>
+<p>它主要用于显示现代英语，是现今最通用的单字节编码系统，并等同于国际标准ISO/IEC 646</p>
+<h3 id="ISO-8859-1"><a href="#ISO-8859-1" class="headerlink" title="ISO 8859-1"></a>ISO 8859-1</h3><blockquote>
+<p>正式编号为ISO/IEC 8859-1:1998，又称Latin-1或西欧语言</p>
+</blockquote>
+<p>是国际标准化组织内ISO/IEC 8859的第一个8位字符集。它以ASCII为基础，<strong>在空置的0xA0-0xFF的范围内，加入96个字母及符号</strong>，藉以供使用附加符号的拉丁字母语言使用</p>
+<h3 id="UTF-32-amp-UCS-4"><a href="#UTF-32-amp-UCS-4" class="headerlink" title="UTF-32 &amp; UCS-4"></a>UTF-32 &amp; UCS-4</h3><blockquote>
+<p>UTF: UCS Transformation Format</p>
+</blockquote>
+<p>UTF-32它的编码值与UCS-4相同，只不过为了兼容Unicode标准,其编码空间被限定在了0~0x10FFFF之间。因此也可以说：UTF-32是UCS-4的一个子集</p>
+<h3 id="UTF-16-amp-UCS-2"><a href="#UTF-16-amp-UCS-2" class="headerlink" title="UTF-16 &amp; UCS-2"></a>UTF-16 &amp; UCS-2</h3><p>除了UCS-4，ISO 10646标准为 UCS 定义了一种16位的编码形式（即UCS-2），其编码固定占用2个字节，它包含65536个编码空间（可以为全世界最常用的63K字符编码，为了兼容Unicode，0xD800-0xDFFF之间的码位未使用）</p>
+<p>但两个字节并不足以真正的“一统江湖”，于是UTF-16诞生了，与UCS-2一样，它使用两个字节为全世界最常用的63K字符编码，不同的是，它使用4个字节对不常用的字符进行编码。<strong>UTF-16属于变长编码</strong></p>
+<p>具体和Unicode之间的转换关系，有兴趣详见：<a href="https://zh.wikipedia.org/wiki/UTF-16" target="_blank" rel="external">https://zh.wikipedia.org/wiki/UTF-16</a></p>
+<h3 id="UTF-8"><a href="#UTF-8" class="headerlink" title="UTF-8"></a>UTF-8</h3><blockquote>
+<p>无论是UTF-16/32还是UCS-2/4，一个字符都需要多个字节来编码，这对那些英语国家来说多浪费啊，因此UTF-8产生了</p>
+</blockquote>
+<p>在UTF-8编码中，ASCII码中的字符还是ASCII码的值，只需要一个字节表示，其余的字符需要2字节、3字节或4字节来表示</p>
+<p>UTF-8的编码规则：</p>
+<ol>
+<li>对于ASCII码中的符号，使用单字节编码，其编码值与ASCII值相同。其中ASCII值的范围为0~0x7F，所有编码的二进制值中第一位为0（用来区分单字节编码和多字节编码）</li>
+<li>其它字符用多个字节来编码（假设用N个字节），多字节编码需满足<ol>
+<li>第一个字节的前N位都为1，第N+1位为0</li>
+<li>后面N-1个字节的前两位都为10</li>
+<li>N个字节中其余位全部用来存储Unicode中的码位值</li>
+</ol>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>字节数</th>
+<th>Unicode</th>
+<th>UTF-8编码</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>  1</td>
+<td>000000-00007F</td>
+<td>0xxxxxxx</td>
+</tr>
+<tr>
+<td>  2</td>
+<td>000080-0007FF</td>
+<td>110xxxxx 10xxxxxx</td>
+</tr>
+<tr>
+<td>  3</td>
+<td>000800-00FFFF</td>
+<td>1110xxxx 10xxxxxx 10xxxxxx</td>
+</tr>
+<tr>
+<td>  4</td>
+<td>010000-10FFFF</td>
+<td>11110xxx 10xxxxxx 10xxxxxx 10xxxxxx</td>
+</tr>
+</tbody>
+</table>
+<h3 id="GBxxx"><a href="#GBxxx" class="headerlink" title="GBxxx"></a>GBxxx</h3><blockquote>
+<p>GB: 汉字字符集标准编码</p>
+</blockquote>
+<p>GB相关编码编码规则，本质上类似UTF-8等编码，再次不在概述，有兴趣可以查阅：</p>
+<ul>
+<li><a href="https://zh.wikipedia.org/wiki/GB_2312" target="_blank" rel="external">https://zh.wikipedia.org/wiki/GB_2312</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E6%B1%89%E5%AD%97%E5%86%85%E7%A0%81%E6%89%A9%E5%B1%95%E8%A7%84%E8%8C%83" target="_blank" rel="external">https://zh.wikipedia.org/wiki/汉字内码扩展规范</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/GB_18030" target="_blank" rel="external">https://zh.wikipedia.org/wiki/GB_18030</a></li>
+</ul>
+<h4 id="GB2312"><a href="#GB2312" class="headerlink" title="GB2312"></a>GB2312</h4><blockquote>
+<p>GB2312 或 GB2312–80 是中华人民共和国国家标准简体中文字符集，全称《信息交换用汉字编码字符集·基本集》</p>
+</blockquote>
+<p>GB2312使用一字节或者两字节的变长编码，使用两个字节表示汉字，共收录6763个汉字，其中一级汉字3755个，二级汉字3008个；同时收录了包括拉丁字母、希腊字母、日文平假名及片假名字母、俄语西里尔字母在内的682个字符</p>
+<p><strong>但对于人名、古汉语等方面出现的罕用字和繁体字，GB2312不能处理</strong></p>
+<h4 id="GBK"><a href="#GBK" class="headerlink" title="GBK"></a>GBK</h4><blockquote>
+<p>GBK全名为《汉字内码扩展规范(GBK)》</p>
+</blockquote>
+<p>微软利用GB2312-80未使用的编码空间，收录GB13000.1-93全部字符制定了GBK编码，GBK向下完全兼容GB2312-80编码，最早实现于Windows 95简体中文版</p>
+<p>1995年的汉字扩展规范GBK1.0收录了21886个符号，包括21003个汉字和883个其它符号</p>
+<p><strong>GBK 只为“技术规范指导性文件”，不属于国家标准</strong></p>
+<p>国家质量技术监督局于2000年3月17日推出了GB 18030-2000标准，以取代GBK</p>
+<h4 id="GB18030"><a href="#GB18030" class="headerlink" title="GB18030"></a>GB18030</h4><blockquote>
+<p>GB18030，全称：国家标准GB18030-2005《信息技术中文编码字符集》，是中华人民共和国现时最新的内码字集，共收录汉字70,244个</p>
+</blockquote>
+<p>GB 18030主要有以下特点:</p>
+<ul>
+<li>与 UTF-8 相同，采用多字节编码，每个字可以由1个、2个或4个字节组成</li>
+<li>支持GB13000及Unicode的全部统一汉字，编码空间庞大，最多可定义161万个字元</li>
+<li>与GB2312-1980完全兼容，与GBK基本兼容</li>
+<li>支持中国国内少数民族的文字，不需要动用造字区</li>
+<li>汉字收录范围包含繁体汉字以及日韩汉字</li>
+</ul>
+<h3 id="字符编码对比"><a href="#字符编码对比" class="headerlink" title="字符编码对比"></a>字符编码对比</h3><table>
+<thead>
+<tr>
+<th>字符编码</th>
+<th>编码空间</th>
+<th>最少编码字节数</th>
+<th>最大编码字节数</th>
+<th>变长编码</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>  ASCII</td>
+<td>0-7F</td>
+<td>1</td>
+<td>1</td>
+<td>no</td>
+</tr>
+<tr>
+<td>IS O8859-1</td>
+<td>0-FF</td>
+<td>1</td>
+<td>1</td>
+<td>no</td>
+</tr>
+<tr>
+<td>  UCS-4</td>
+<td>0-7FFFFFFF</td>
+<td>4</td>
+<td>4</td>
+<td>no</td>
+</tr>
+<tr>
+<td>  UCS-2</td>
+<td>0-FFFF</td>
+<td>2</td>
+<td>2</td>
+<td>no</td>
+</tr>
+<tr>
+<td>  UTF-32</td>
+<td>0-10FFFF</td>
+<td>4</td>
+<td>4</td>
+<td>no</td>
+</tr>
+<tr>
+<td>  UTF-16</td>
+<td>0-10FFFF</td>
+<td>2</td>
+<td>4</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>  UTF-8</td>
+<td>0-10FFFF</td>
+<td>1</td>
+<td>4</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>  GB2312</td>
+<td>0-10FFFF</td>
+<td>1</td>
+<td>2</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>   GBK</td>
+<td>0-10FFFF</td>
+<td>1</td>
+<td>2</td>
+<td>yes</td>
+</tr>
+<tr>
+<td> GB18030</td>
+<td>0-10FFFF</td>
+<td>1</td>
+<td>4</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h2 id="BOM"><a href="#BOM" class="headerlink" title="BOM"></a>BOM</h2><blockquote>
+<p>字节顺序标记（Byte Order Mark，BOM），X86平台的PC机默认是小端字节序（FFFE）</p>
+</blockquote>
+<p>不同的系统往往默认读取字节的顺序是不一样的，分为：高位在前（大端序）、低位在前（小端序），所以不同的字节顺序会影响到对字符的编码和转换；关于字节序详见：<a href="https://zh.wikipedia.org/wiki/%E5%AD%97%E8%8A%82%E5%BA%8F" target="_blank" rel="external">https://zh.wikipedia.org/wiki/字节序</a></p>
+<p>BOM通常用在文件或者字节流的开头，使用两个字节来标示字节流是高位在前（0xFEFF）还是低位在前（0xFFFE）</p>
+<p>如果它出现在字节流的中间，则表达零宽度非换行空格的意义，用户看起来就是一个空格。但是从Unicode3.2开始，只能出现在字节流的开头，只能用于标识字节序，除此以外的用法已被舍弃。取而代之的是，使用0x2060来表达零宽度非换行空格的意义</p>
+<p><strong>有些编码是不依赖于BOM的，比如UTF-8，所有不用添加BOM信息，添加BOM反而会导致某些情况下的乱码</strong></p>
+<h2 id="文件编码"><a href="#文件编码" class="headerlink" title="文件编码"></a>文件编码</h2><p>一般会采用三种方式来判断文本的编码:</p>
+<ol>
+<li><p>检测文件头标识<br> 根据文件的头几个字节（BOM和编码信息）内容进行判断</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 常见的编码头几个字节标识如下</span><br><span class="line">EF BB BF       UTF-8 </span><br><span class="line">FE FF          UTF-16/UCS-2, little endian </span><br><span class="line">FF FE          UTF-16/UCS-2, big endian </span><br><span class="line">FF FE 00 00    UTF-32/UCS-4, little endian</span><br><span class="line">00 00 FE FF    UTF-32/UCS-4, big-endian</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol>
+<li>基于文件内容根据一定的规则猜测</li>
+<li>提示用户选择</li>
+</ol>
+<p>python的chardet模块实现了前两种方式的自动识别，有兴趣可以查看相关源码：<a href="https://github.com/chardet/chardet" target="_blank" rel="external">https://github.com/chardet/chardet</a></p>
+<h3 id="联通的经典笑话"><a href="#联通的经典笑话" class="headerlink" title="联通的经典笑话"></a>联通的经典笑话</h3><blockquote>
+<p>一个关于文件编码的经典笑话： 使用记事本新建一个txt文件，输入移动两个字然后保存，再用记事本打开，显示正常；再新建一个txt文件，输入联通两个字然后保存，再用记事本打开，出现乱码。因此有人说联通不如移动强是有原因的……也有人说是联通得罪了微软……</p>
+</blockquote>
+<p>当然这是一个笑话，原因可以通过理解记事本判断文本的编码的方式来解释：</p>
+<ol>
+<li>保存包含联通两个字的文件时并没有指定编码，默认以ANSI编码保存(中文字符其实就是用GBK编码)</li>
+<li>联通的GBK编码是：C1 AA CD A8</li>
+<li>打开文件时因为保存时没有指定编码，所以记事本会使用上面的方式二进行猜测编码</li>
+<li>恰巧C1 AA CD A8匹配上了UTF-8的规则，于是记事本使用UTF-8显示联通，所以导致乱码</li>
+</ol>
+]]></content>
     
     <summary type="html">
     
@@ -522,57 +522,57 @@
     <published>2016-05-16T08:46:52.000Z</published>
     <updated>2016-05-16T08:53:55.000Z</updated>
     
-    <content type="html">&lt;blockquote&gt;
-&lt;p&gt;Quorum([‘kwɔ:rəm])字面意思是选举法定人数，在西方资本主义社会在举行选举时，通常要求参与人数必须达到额定的数量，才能成为一个法定有效的选举，这个额定的人数就是Quorum&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Quorum机制是一种&lt;strong&gt;容错技术&lt;/strong&gt;，是一种分布式系统中常用的用来保证数据冗余和最终一致性的投票算法，其主要数学思想来源于鸽笼原理&lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;blockquote&gt;
-&lt;p&gt;鸽笼原理很简单：若有n+1只鸽子关在n个笼子里，那么至少有一个笼子有至少2只鸽子&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;Quorum-NRW机制&quot;&gt;&lt;a href=&quot;#Quorum-NRW机制&quot; class=&quot;headerlink&quot; title=&quot;Quorum NRW机制&quot;&gt;&lt;/a&gt;Quorum NRW机制&lt;/h2&gt;&lt;p&gt;分布式系统通常支持多副本，副本存放在不同节点上，读写时需要对多个副本进行操作，Quorum NRW机制如下:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;N表示数据所具有的副本数&lt;/li&gt;
-&lt;li&gt;R表示完成读操作所需要读取的最小副本数，即一次读操作所需参与的最小节点数目&lt;/li&gt;
-&lt;li&gt;W表示完成写操作所需要写入的最小副本数，即一次写操作所需参与的最小节点数目&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;如果R + W ≤ N，这时读取和写入操作是不重叠的；只需要保证R + W &amp;gt; N，就可以保证强一致性&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;quorum由多个节点构成（一般是3个，AWS Dynamo默认就是3个），quorum内节点之间通过互相通信和数据复制等方式来保持数据操作的一致性。同时，各个quorum之间又通过相交节点来把各自quorum内部的数据复制到其它quorum的所有节点&lt;/p&gt;
-&lt;p&gt;各种quorum系统容错技术的主要区别在于组织方式、拓扑结构、执行协议的不同，以及由此带来的&lt;strong&gt;性能&lt;/strong&gt;和&lt;strong&gt;应用领域&lt;/strong&gt;的差异&lt;/p&gt;
-&lt;h2 id=&quot;容错协议&quot;&gt;&lt;a href=&quot;#容错协议&quot; class=&quot;headerlink&quot; title=&quot;容错协议&quot;&gt;&lt;/a&gt;容错协议&lt;/h2&gt;&lt;h3 id=&quot;选举&quot;&gt;&lt;a href=&quot;#选举&quot; class=&quot;headerlink&quot; title=&quot;选举&quot;&gt;&lt;/a&gt;选举&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;选举协议允许写quorum中节点含有数据不同和读quorum中节点含有数据丢失或者不一致的错误或者故障，但是只要当前quorum有效节点所包含正确数据信息足够多，客户端任然能从quorum的返回数据中获取有效数据&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;客户端根据返回数据的时间戳来将最新时间戳的数据作为可靠数据选择样本，当所有返回数据值相等且超过quorum规模的一半，就认为数据有效，否则认为数据无效&lt;/p&gt;
-&lt;p&gt;如果整个系统都没有有效读quorum，则系统失效&lt;/p&gt;
-&lt;h3 id=&quot;互斥&quot;&gt;&lt;a href=&quot;#互斥&quot; class=&quot;headerlink&quot; title=&quot;互斥&quot;&gt;&lt;/a&gt;互斥&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;互斥协议从不含故障或者错误节点的有效quorum的节点中获得有效数据&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;读操作：从其它有效quorum中获取有效数据，如果整个系统都没有有效读quorum，则系统失效&lt;/p&gt;
-&lt;p&gt;写操作：如果对同一数据进行写操作，则时间戳早或者优先权高的优先操作；如果对不同数据进行写操作且数据之间存在同步关系，则时间戳早或者优先权高的优先操作，否则如果无同步关系，则先到者先操作&lt;/p&gt;
-&lt;h2 id=&quot;系统特征&quot;&gt;&lt;a href=&quot;#系统特征&quot; class=&quot;headerlink&quot; title=&quot;系统特征&quot;&gt;&lt;/a&gt;系统特征&lt;/h2&gt;&lt;p&gt;很多特征都是双刃剑，如何权衡是一种艺术，需要结合具体的场景&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;规模（size）&lt;br&gt;数量越大则节点间通信成本越高，同步时长越长；反之，数量越小则冗余量越小，含有有效数据的节点比例也越低；规模是把双刃剑，如何选择是种艺术，一般选择3个节点&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;可用性（availability）&lt;br&gt;可用性即节点出错时系统仍能可靠运行的概率，该值越大则系统可用性越高，容错性能也越好&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;最大失效节点个数&lt;br&gt;系统在满足可用性的前提下所能容忍失效节点的最大数量，值比例越大则容错性越好&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;负载（load）&lt;br&gt;系统中&lt;code&gt;最小quorum&lt;/code&gt;的&lt;code&gt;最忙节点&lt;/code&gt;的&lt;code&gt;最小访问概率&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;quorum越小则其内部节点参与quorum之间相交的概率越大&lt;/li&gt;
-&lt;li&gt;最小quorum中参与quorum之间相交最多的节点即为最忙节点&lt;/li&gt;
-&lt;li&gt;节点被访问的最小概率可作为整个系统所有节点被访问的最小概率上限，该值越大则利用率越高，同时也要求最忙节点的可靠性也就越高&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;读容量（read-capability）&lt;br&gt;系统最大可并行进行读操作且不相交读quorum的个数；在系统总节点数固定的情况下，读容量越大则系统提供并行数据服务的能力越高&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;特殊用例&quot;&gt;&lt;a href=&quot;#特殊用例&quot; class=&quot;headerlink&quot; title=&quot;特殊用例&quot;&gt;&lt;/a&gt;特殊用例&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;当W = 1，R = N时，系统对写操作有较高的要求，但读操作会比较慢，若N个节点中有节点发生故障，那么读操作将不能完成&lt;/li&gt;
-&lt;li&gt;当R = 1，W = N时，系统要求读操作高性能、高可用，但写操作性能较低，用于需要大量读操作的系统，若N个节点中有节点发生故障，那么写操作将无法完成&lt;/li&gt;
-&lt;li&gt;当R = Q，W = Q，Q = N / 2 + 1时，系统在读写性能之间取得了平衡，兼顾了性能和可用性，AWS Dynamo系统的默认设置就是这种，即N=3，W=2，R=2&lt;/li&gt;
-&lt;/ol&gt;
-</content>
+    <content type="html"><![CDATA[<blockquote>
+<p>Quorum([‘kwɔ:rəm])字面意思是选举法定人数，在西方资本主义社会在举行选举时，通常要求参与人数必须达到额定的数量，才能成为一个法定有效的选举，这个额定的人数就是Quorum</p>
+</blockquote>
+<p>Quorum机制是一种<strong>容错技术</strong>，是一种分布式系统中常用的用来保证数据冗余和最终一致性的投票算法，其主要数学思想来源于鸽笼原理</p>
+<a id="more"></a>
+<blockquote>
+<p>鸽笼原理很简单：若有n+1只鸽子关在n个笼子里，那么至少有一个笼子有至少2只鸽子</p>
+</blockquote>
+<h2 id="Quorum-NRW机制"><a href="#Quorum-NRW机制" class="headerlink" title="Quorum NRW机制"></a>Quorum NRW机制</h2><p>分布式系统通常支持多副本，副本存放在不同节点上，读写时需要对多个副本进行操作，Quorum NRW机制如下:</p>
+<ul>
+<li>N表示数据所具有的副本数</li>
+<li>R表示完成读操作所需要读取的最小副本数，即一次读操作所需参与的最小节点数目</li>
+<li>W表示完成写操作所需要写入的最小副本数，即一次写操作所需参与的最小节点数目</li>
+</ul>
+<p><strong>如果R + W ≤ N，这时读取和写入操作是不重叠的；只需要保证R + W &gt; N，就可以保证强一致性</strong></p>
+<p>quorum由多个节点构成（一般是3个，AWS Dynamo默认就是3个），quorum内节点之间通过互相通信和数据复制等方式来保持数据操作的一致性。同时，各个quorum之间又通过相交节点来把各自quorum内部的数据复制到其它quorum的所有节点</p>
+<p>各种quorum系统容错技术的主要区别在于组织方式、拓扑结构、执行协议的不同，以及由此带来的<strong>性能</strong>和<strong>应用领域</strong>的差异</p>
+<h2 id="容错协议"><a href="#容错协议" class="headerlink" title="容错协议"></a>容错协议</h2><h3 id="选举"><a href="#选举" class="headerlink" title="选举"></a>选举</h3><blockquote>
+<p>选举协议允许写quorum中节点含有数据不同和读quorum中节点含有数据丢失或者不一致的错误或者故障，但是只要当前quorum有效节点所包含正确数据信息足够多，客户端任然能从quorum的返回数据中获取有效数据</p>
+</blockquote>
+<p>客户端根据返回数据的时间戳来将最新时间戳的数据作为可靠数据选择样本，当所有返回数据值相等且超过quorum规模的一半，就认为数据有效，否则认为数据无效</p>
+<p>如果整个系统都没有有效读quorum，则系统失效</p>
+<h3 id="互斥"><a href="#互斥" class="headerlink" title="互斥"></a>互斥</h3><blockquote>
+<p>互斥协议从不含故障或者错误节点的有效quorum的节点中获得有效数据</p>
+</blockquote>
+<p>读操作：从其它有效quorum中获取有效数据，如果整个系统都没有有效读quorum，则系统失效</p>
+<p>写操作：如果对同一数据进行写操作，则时间戳早或者优先权高的优先操作；如果对不同数据进行写操作且数据之间存在同步关系，则时间戳早或者优先权高的优先操作，否则如果无同步关系，则先到者先操作</p>
+<h2 id="系统特征"><a href="#系统特征" class="headerlink" title="系统特征"></a>系统特征</h2><p>很多特征都是双刃剑，如何权衡是一种艺术，需要结合具体的场景</p>
+<ul>
+<li><p>规模（size）<br>数量越大则节点间通信成本越高，同步时长越长；反之，数量越小则冗余量越小，含有有效数据的节点比例也越低；规模是把双刃剑，如何选择是种艺术，一般选择3个节点</p>
+</li>
+<li><p>可用性（availability）<br>可用性即节点出错时系统仍能可靠运行的概率，该值越大则系统可用性越高，容错性能也越好</p>
+</li>
+<li><p>最大失效节点个数<br>系统在满足可用性的前提下所能容忍失效节点的最大数量，值比例越大则容错性越好</p>
+</li>
+<li><p>负载（load）<br>系统中<code>最小quorum</code>的<code>最忙节点</code>的<code>最小访问概率</code></p>
+<ul>
+<li>quorum越小则其内部节点参与quorum之间相交的概率越大</li>
+<li>最小quorum中参与quorum之间相交最多的节点即为最忙节点</li>
+<li>节点被访问的最小概率可作为整个系统所有节点被访问的最小概率上限，该值越大则利用率越高，同时也要求最忙节点的可靠性也就越高</li>
+</ul>
+</li>
+<li><p>读容量（read-capability）<br>系统最大可并行进行读操作且不相交读quorum的个数；在系统总节点数固定的情况下，读容量越大则系统提供并行数据服务的能力越高</p>
+</li>
+</ul>
+<h2 id="特殊用例"><a href="#特殊用例" class="headerlink" title="特殊用例"></a>特殊用例</h2><ol>
+<li>当W = 1，R = N时，系统对写操作有较高的要求，但读操作会比较慢，若N个节点中有节点发生故障，那么读操作将不能完成</li>
+<li>当R = 1，W = N时，系统要求读操作高性能、高可用，但写操作性能较低，用于需要大量读操作的系统，若N个节点中有节点发生故障，那么写操作将无法完成</li>
+<li>当R = Q，W = Q，Q = N / 2 + 1时，系统在读写性能之间取得了平衡，兼顾了性能和可用性，AWS Dynamo系统的默认设置就是这种，即N=3，W=2，R=2</li>
+</ol>
+]]></content>
     
     <summary type="html">
     
@@ -601,26 +601,26 @@
     <published>2016-05-05T06:25:15.000Z</published>
     <updated>2016-05-17T09:31:51.000Z</updated>
     
-    <content type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/fish-shell/fish-shell&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;fish shell&lt;/a&gt; 相比较 &lt;a href=&quot;https://github.com/robbyrussell/oh-my-zsh&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;zsh(oh-my-zsh)&lt;/a&gt; 提供了一些比较炫酷的特性， 详见官网 &lt;a href=&quot;http://fishshell.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;fishshell&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;其中主要有两个特性非常有吸引力：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;智能提示（Autosuggestions）&lt;/li&gt;
-&lt;li&gt;语法高亮（Glorious VGA Color）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;p&gt;但是搜索后发现，使用过fish的同学大多最终都回归了zsh, 主要因为fish有如下问题：&lt;strong&gt;非标准shell坑多&lt;/strong&gt;、无插件机制、不兼容vim等&lt;/p&gt;
-&lt;p&gt;那么问题来了，&lt;a href=&quot;https://github.com/robbyrussell/oh-my-zsh&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;zsh&lt;/a&gt; 是否有类似比较炫酷的功能呢？&lt;/p&gt;
-&lt;p&gt;答案是肯定的（&lt;code&gt;好的特性总是会相互学习&lt;/code&gt;），在  &lt;a href=&quot;https://github.com/zsh-users&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;zsh-users&lt;/a&gt;(zsh community projects) 中有两个插件插件实现了相同的特性：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/zsh-users/zsh-autosuggestions&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;zsh-autosuggestions&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/zsh-users/zsh-syntax-highlighting&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;zsh-syntax-highlighting&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;install-plugins&quot;&gt;&lt;a href=&quot;#install-plugins&quot; class=&quot;headerlink&quot; title=&quot;install plugins&quot;&gt;&lt;/a&gt;install plugins&lt;/h2&gt;&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# clone plugins&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git &lt;span class=&quot;built_in&quot;&gt;clone&lt;/span&gt; https://github.com/zsh-users/zsh-autosuggestions.git \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;variable&quot;&gt;$&amp;#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&amp;#125;&lt;/span&gt;/plugins/zsh-autosuggestions&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git &lt;span class=&quot;built_in&quot;&gt;clone&lt;/span&gt; https://github.com/zsh-users/zsh-syntax-highlighting.git \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;variable&quot;&gt;$&amp;#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&amp;#125;&lt;/span&gt;/plugins/zsh-syntax-highlighting&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# config ~/.zshrc&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# plugins=( [plugins...] zsh-autosuggestions zsh-syntax-highlighting)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# source config&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;source&lt;/span&gt; ~/.zshrc&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&quot;zsh-autosuggestions&quot;&gt;&lt;a href=&quot;#zsh-autosuggestions&quot; class=&quot;headerlink&quot; title=&quot;zsh-autosuggestions&quot;&gt;&lt;/a&gt;zsh-autosuggestions&lt;/h2&gt;&lt;p&gt;根据 shell history 进行智能提示&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/media/14634761414446.jpg&quot; alt=&quot;zsh-autosuggestions&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;zsh-syntax-highlighting&quot;&gt;&lt;a href=&quot;#zsh-syntax-highlighting&quot; class=&quot;headerlink&quot; title=&quot;zsh-syntax-highlighting&quot;&gt;&lt;/a&gt;zsh-syntax-highlighting&lt;/h2&gt;&lt;p&gt;图中可以看到 echo 是绿色的，代表存在这个命令，如果打错了(git)，就显示是红色的&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/media/14634767368616.jpg&quot; alt=&quot;zsh-syntax-highlighting&quot;&gt;&lt;/p&gt;
-</content>
+    <content type="html"><![CDATA[<p><a href="https://github.com/fish-shell/fish-shell" target="_blank" rel="external">fish shell</a> 相比较 <a href="https://github.com/robbyrussell/oh-my-zsh" target="_blank" rel="external">zsh(oh-my-zsh)</a> 提供了一些比较炫酷的特性， 详见官网 <a href="http://fishshell.com/" target="_blank" rel="external">fishshell</a></p>
+<p>其中主要有两个特性非常有吸引力：</p>
+<ul>
+<li>智能提示（Autosuggestions）</li>
+<li>语法高亮（Glorious VGA Color）</li>
+</ul>
+<a id="more"></a>
+<p>但是搜索后发现，使用过fish的同学大多最终都回归了zsh, 主要因为fish有如下问题：<strong>非标准shell坑多</strong>、无插件机制、不兼容vim等</p>
+<p>那么问题来了，<a href="https://github.com/robbyrussell/oh-my-zsh" target="_blank" rel="external">zsh</a> 是否有类似比较炫酷的功能呢？</p>
+<p>答案是肯定的（<code>好的特性总是会相互学习</code>），在  <a href="https://github.com/zsh-users" target="_blank" rel="external">zsh-users</a>(zsh community projects) 中有两个插件插件实现了相同的特性：</p>
+<ul>
+<li><a href="https://github.com/zsh-users/zsh-autosuggestions" target="_blank" rel="external">zsh-autosuggestions</a></li>
+<li><a href="https://github.com/zsh-users/zsh-syntax-highlighting" target="_blank" rel="external">zsh-syntax-highlighting</a></li>
+</ul>
+<h2 id="install-plugins"><a href="#install-plugins" class="headerlink" title="install plugins"></a>install plugins</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># clone plugins</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/zsh-users/zsh-autosuggestions.git \</span><br><span class="line"><span class="variable">$&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;</span>/plugins/zsh-autosuggestions</span><br><span class="line"></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/zsh-users/zsh-syntax-highlighting.git \</span><br><span class="line"><span class="variable">$&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;</span>/plugins/zsh-syntax-highlighting</span><br><span class="line"></span><br><span class="line"><span class="comment"># config ~/.zshrc</span></span><br><span class="line"><span class="comment"># plugins=( [plugins...] zsh-autosuggestions zsh-syntax-highlighting)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># source config</span></span><br><span class="line"><span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
+<h2 id="zsh-autosuggestions"><a href="#zsh-autosuggestions" class="headerlink" title="zsh-autosuggestions"></a>zsh-autosuggestions</h2><p>根据 shell history 进行智能提示</p>
+<p><img src="/media/14634761414446.jpg" alt="zsh-autosuggestions"></p>
+<h2 id="zsh-syntax-highlighting"><a href="#zsh-syntax-highlighting" class="headerlink" title="zsh-syntax-highlighting"></a>zsh-syntax-highlighting</h2><p>图中可以看到 echo 是绿色的，代表存在这个命令，如果打错了(git)，就显示是红色的</p>
+<p><img src="/media/14634767368616.jpg" alt="zsh-syntax-highlighting"></p>
+]]></content>
     
     <summary type="html">
     
